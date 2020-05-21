@@ -30,14 +30,48 @@
       </p>
     </header>
     <main>
-      <div>
+      <nav class="breadcrumbs">
         <a href="index.html">Главная</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="#">Сливочное</a>
-      </div>
+        <a href="#">Каталог</a>
+        <span>Сливочное</span>
+      </nav>
       <h1>Сливочное мороженое</h1>
       <section>
-        <!-- Фильтр мороженого -->
+        <form action="#" method="post">
+          <div>
+            <span>Сортировка:</span>
+              <select>
+                <option>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
+              </select>
+          </div>
+          <div>
+            <span>Цена: 100 ₽ – 500 ₽</span>
+            <div>
+              <!-- Хитрый фильтр -->
+            </div>
+          </div>
+          <div>
+            <span>Жирность:</span>
+            <div>
+              <label><input type="radio" name="fat">0%</label>
+              <label><input type="radio" name="fat" checked>до 10%</label>
+              <label><input type="radio" name="fat">до 30%</label>
+              <label><input type="radio" name="fat">выше 30%</label>
+            </div>
+          </div>
+          <div>
+            <span>Наполнители:</span>
+            <label><input type="checkbox" checked>шоколадные</label>
+            <label><input type="checkbox" checked>сахарные присыпки</label>
+            <label><input type="checkbox">фрукты</label>
+            <label><input type="checkbox">сиропы</label>
+            <label><input type="checkbox">джемы</label>
+          </div>
+          <button type="submit">Применить</button>
+        </form>
       </section>
       <section>
         <ul>
