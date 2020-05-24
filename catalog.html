@@ -38,38 +38,36 @@
       <h1>Сливочное мороженое</h1>
       <section>
         <form action="#" method="post">
-          <div>
-            <span>Сортировка:</span>
+          <fieldset>
+            <legend>Сортировка:</legend>
               <select>
                 <option>по популярности</option>
                 <option>сначала недорогие</option>
                 <option>сначала дорогие</option>
                 <option>по жирности</option>
               </select>
-          </div>
-          <div>
-            <span>Цена: 100 ₽ – 500 ₽</span>
+          </fieldset>
+          <fieldset>
+            <legend>Цена: 100 ₽ – 500 ₽</legend>
             <div>
               <!-- Хитрый фильтр -->
             </div>
-          </div>
-          <div>
-            <span>Жирность:</span>
-            <div>
+          </fieldset>
+          <fieldset>
+            <legend>Жирность:</legend>
               <label><input type="radio" name="fat">0%</label>
               <label><input type="radio" name="fat" checked>до 10%</label>
               <label><input type="radio" name="fat">до 30%</label>
               <label><input type="radio" name="fat">выше 30%</label>
-            </div>
-          </div>
-          <div>
-            <span>Наполнители:</span>
+          </fieldset>
+          <fieldset>
+            <legend>Наполнители:</legend>
             <label><input type="checkbox" checked>шоколадные</label>
             <label><input type="checkbox" checked>сахарные присыпки</label>
             <label><input type="checkbox">фрукты</label>
             <label><input type="checkbox">сиропы</label>
             <label><input type="checkbox">джемы</label>
-          </div>
+          </fieldset>
           <button type="submit">Применить</button>
         </form>
       </section>
