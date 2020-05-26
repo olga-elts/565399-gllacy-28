@@ -21,9 +21,22 @@
         <a href="#">Доставка и оплата</a>
         <a href="#">О компании</a>
       </nav>
-      <a href="#">Поиск</a>
+      <a href="#"><span class="visually-hidden">Поиск</span></a>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <label for="search" class="visually-hidden">Поиск</label>
+        <input id="search" type="search" name="search" placeholder="Крем-брюле">
+      </form>
       <a href="#">Вход</a>
-      <a href="#">Корзина</a>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="login-email" class="visually-hidden">Логин</label>
+        <input id="login-email" type="email" name="login" placeholder="email@example.com" required>
+        <label for="login-password" class="visually-hidden">Пароль</label>
+        <input id="login-password" type="password" name="password" placeholder="••••••" required>
+        <button type="submit">Войти</button>
+        <a href="#">Забыли пароль?</a>
+        <a href="#">Новая регистрация</a>
+      </form>
+      <a href="#">Пусто</a>
       <p>
         с 10 до 20, ежедневно
         <b>8 812 450-25-25</b>
@@ -41,10 +54,15 @@
           <img src="img/icecream-group3.png" alt="Два рожка мороженого: ванильного и розового цветов" width="639" height="582">
           <h2>Пломбир с помадкой и клубничный щербет</h2>
         </div>
+        <div class="visually-hidden">
+          <input id="btn-1" type="radio" name="toggle" checked>
+          <input id="btn-2" type="radio" name="toggle">
+          <input id="btn-3" type="radio" name="toggle">
+        </div>
         <div>
-          <input type="radio" checked name="promo-img">
-          <input type="radio" name="promo-img">
-          <input type="radio" name="promo-img">
+          <label for="btn-1"><span class="visually-hidden">Переключатель промо: изображение 1</span></label>
+          <label for="btn-2"><span class="visually-hidden">Переключатель промо: изображение 2</span></label>
+          <label for="btn-3"><span class="visually-hidden">Переключатель промо: изображение 3</span></label>
         </div>
         <a href="#">Давайте оба!</a>
       </section>
@@ -66,7 +84,6 @@
       <section>
         <article>
           <a href="#">
-            <!-- Выбрала .jpg для картинок товара, т.к. 1. они легче, 2. подумала, что при последующей возможной замене картинок условный заказчик вряд ли будет готовить сразу круглые прозрачные картинки для загрузки. "Круглость" реализую через border-radius. Насколько логично? :) -->
             <img src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="267" height="267">
           </a>
           <p>310 ₽<span>/кг</span></p>
@@ -121,8 +138,9 @@
       </article>
       <article>
         <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <form action="#" method="post">
-          <input type="email" placeholder="email@example.com">
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
+          <input id="subscribe-email" type="email" name="subscribe-email" placeholder="email@example.com" required>
           <button type="submit">Отправить</button>
         </form>
       </article>
@@ -144,10 +162,10 @@
     </main>
     <footer>
       <section>
-        <a href="#">Facebook</a>
-        <a href="#">Вконтакте</a>
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
+        <a href="#"><span class="visually-hidden">Facebook</span></a>
+        <a href="#"><span class="visually-hidden">Вконтакте</span></a>
+        <a href="#"><span class="visually-hidden">Instagram</span></a>
+        <a href="#"><span class="visually-hidden">Twitter</span></a>
       </section>
       <section>
         <a href="#" class="spotlight">Для поставщиков</a>
@@ -157,10 +175,22 @@
       </section>
       <sectopn>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <span>Логотип HTML Academy</span>
+          <span class="visually-hidden">Логотип HTML Academy</span>
         </a>
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
       </sectopn>
     </footer>
+    <div>
+      <b>Мы обязательно вам ответим!</b>
+      <button type="button" aria-label="Закрыть форму"></button>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="name" class="visually-hidden">Имя Фамилия</label>
+        <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+        <label for="email" class="visually-hidden">Элетронная почта</label>
+        <input id="email" type="email" name="email" placeholder="email@example.com" required>
+        <textarea name="customer-request" placeholder="В свободной форме"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
   </body>
 </html>

@@ -21,9 +21,66 @@
         <a href="#">Доставка и оплата</a>
         <a href="#">О компании</a>
       </nav>
-      <a href="#">Поиск</a>
+      <a href="#"><span class="visually-hidden">Поиск</span></a>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <label for="search" class="visually-hidden">Поиск</label>
+        <input id="search" type="search" name="search" placeholder="Крем-брюле">
+      </form>
       <a href="#">Вход</a>
-      <a href="#">Корзина</a>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="login-email" class="visually-hidden">Логин</label>
+        <input id="login-email" type="email" name="login" placeholder="email@example.com" required>
+        <label for="login-password" class="visually-hidden">Пароль</label>
+        <input id="login-password" type="password" name="password" placeholder="••••••" required>
+        <button type="submit">Войти</button>
+        <a href="#">Забыли пароль?</a>
+        <a href="#">Новая регистрация</a>
+      </form>
+      <a href="#">2 товара</a>
+      <div>
+        <table>
+          <tr>
+            <td>
+              <button type="button" aria-label="Убрать товар из корзины"></button>
+            </td>
+            <td>
+              <img src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="33" height="33">
+            </td>
+            <td>
+              Пломбир с апельсиновым джемом
+            </td>
+            <td>
+              1,5 кг х <span>200 руб.</span>
+            </td>
+            <td>
+              300 руб.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" aria-label="Убрать товар из корзины"></button>
+            </td>
+            <td>
+              <img src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="33" height="33">
+            </td>
+            <td>
+              Клубничный пломбир с присыпкой из белого шоколада
+            </td>
+            <td>
+              1,5 кг х <span>300 руб.</span>
+            </td>
+            <td>
+              450 руб.
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <b>Итого: 750 руб.</b>
+            </td>
+          </tr>
+        </table>
+        <a href="#">Оформить заказ</a>
+      </div>
       <p>
         с 10 до 20, ежедневно
         <b>8 812 450-25-25</b>
@@ -37,14 +94,14 @@
       </nav>
       <h1>Сливочное мороженое</h1>
       <section>
-        <form action="#" method="post">
+        <form action="https://echo.htmlacademy.ru" method="post"> <!-- Или "get"? -->
           <fieldset>
             <legend>Сортировка:</legend>
-              <select>
-                <option>по популярности</option>
-                <option>сначала недорогие</option>
-                <option>сначала дорогие</option>
-                <option>по жирности</option>
+              <select name="sorting order">
+                <option value="popular" selected>по популярности</option>
+                <option value="price up">сначала недорогие</option>
+                <option value="price down">сначала дорогие</option>
+                <option value="fat">по жирности</option>
               </select>
           </fieldset>
           <fieldset>
@@ -55,18 +112,18 @@
           </fieldset>
           <fieldset>
             <legend>Жирность:</legend>
-              <label><input type="radio" name="fat">0%</label>
-              <label><input type="radio" name="fat" checked>до 10%</label>
-              <label><input type="radio" name="fat">до 30%</label>
-              <label><input type="radio" name="fat">выше 30%</label>
+              <label><input type="radio" name="fat" value="0%">0%</label>
+              <label><input type="radio" name="fat" value="less than 10%" checked>до 10%</label>
+              <label><input type="radio" name="fat" value="less than 30%">до 30%</label>
+              <label><input type="radio" name="fat" value="greater than 30%">выше 30%</label>
           </fieldset>
           <fieldset>
             <legend>Наполнители:</legend>
-            <label><input type="checkbox" checked>шоколадные</label>
-            <label><input type="checkbox" checked>сахарные присыпки</label>
-            <label><input type="checkbox">фрукты</label>
-            <label><input type="checkbox">сиропы</label>
-            <label><input type="checkbox">джемы</label>
+            <label><input type="checkbox" name="chocolate" checked>шоколадные</label>
+            <label><input type="checkbox" name="sprinkles" checked>сахарные присыпки</label>
+            <label><input type="checkbox" name="fruits">фрукты</label>
+            <label><input type="checkbox" name="syrups">сиропы</label>
+            <label><input type="checkbox" name="jam">джемы</label>
           </fieldset>
           <button type="submit">Применить</button>
         </form>
@@ -205,10 +262,10 @@
     </main>
     <footer>
       <section>
-        <a href="#">Facebook</a>
-        <a href="#">Вконтакте</a>
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
+        <a href="#"><span class="visually-hidden">Facebook</span></a>
+        <a href="#"><span class="visually-hidden">Вконтакте</span></a>
+        <a href="#"><span class="visually-hidden">Instagram</span></a>
+        <a href="#"><span class="visually-hidden">Twitter</span></a>
       </section>
       <section>
         <a href="#" class="spotlight">Для поставщиков</a>
@@ -218,7 +275,7 @@
       </section>
       <section>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <span>Логотип HTML Academy</span>
+          <span class="visually-hidden">Логотип HTML Academy</span>
         </a>
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
       </section>
