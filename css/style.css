@@ -1,0 +1,35 @@
+:root {
+  --page-bg-1: #849D8F;
+  --page-bg-2: #8996A6;
+  --page-bg-3: #9D8B84;
+  --basic: #FFFFFF;
+  --dark: #323232;
+  --halflight: #5A5A5A;
+  --link-active-light: #FFBC9E;
+  --link-active-dark: #E84D37;
+  --underline-basic: rgba(50, 50, 50, 0.3);
+  --underline-active-light: rgba(255, 188, 158, 0.3);
+  --underline-active-dark: rgba(232, 77, 55, 0.3);
+  --btn-shadow-basic: rgba(172, 16, 0, 0.64);
+  --btn-shadow-hover: #AC1000;
+  --btn-shadow-active: #942718;
+  --interactive-bg-basic: rgba(255, 255, 255, 0.2);
+  --social-bg-basic: rgba(255, 255, 255, 0.8);
+  --toggle-bg-hover: rgba(255, 255, 255, 0.4);
+  --form-bg-basic: #F8F7F4;
+  --form-shadow: rgba(0, 0, 0, 0.4);
+  --input-border: #D3D3D2;
+  --input-bg-basic: rgba(178, 178, 178, 0.52);
+  --input-bg-focus: rgba(46, 136, 228, 0.52);
+  --placeholder-text: #999999;
+  --nav-shadow-active: #696969;
+  --nav-bg-active: #EDEDED;
+  --nav-bg-onpage: #D07058;
+  --dropdownlink-bg-hover: #FBDED7;
+  --dropdownlink-bg-active: #F6B5A5;
+  --dropdown-border: rgba(50, 50, 50, 0.2);
+  --basket-text-weight: #000000;
+  --basket-text-price: #ABABAB;
+  --basket-border: #CACAC7;
+  --price-shadow: rgba(49, 50, 53, 0.5);
+}
