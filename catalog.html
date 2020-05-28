@@ -7,82 +7,85 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
-      <a href="index.html">
+    <header class="header">
+      <a class="logo" href="index.html">
         <img src="img/index-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
       </a>
-      <nav>
-        <a href="#" class="active">Каталог</a>
-        <div>
-          <a href="#" class="highlight">Новинки</a>
-          <a href="#" class="active">Сливочное</a>
-          <a href="#">Щербеты</a>
-          <a href="#">Фруктовый лед</a>
-          <a href="#">Мелорин</a>
+      <nav class="main-nav">
+        <a class="main-nav__link main-nav__link--active" href="#">Каталог</a>
+        <div class="dropdown dropdown--sub-nav">
+          <a class="dropdown__link dropdown__link--highlight" href="#">Новинки</a>
+          <a class="dropdown__link dropdown__link--active" href="#">Сливочное</a>
+          <a class="dropdown__link" href="#">Щербеты</a>
+          <a class="dropdown__link" href="#">Фруктовый лед</a>
+          <a class="dropdown__link" href="#">Мелорин</a>
         </div>
-        <a href="#">Доставка и оплата</a>
-        <a href="#">О компании</a>
+        <a class="main-nav__link" href="#">Доставка и оплата</a>
+        <a class="main-nav__link" href="#">О компании</a>
       </nav>
-      <a href="#"><span class="visually-hidden">Поиск</span></a>
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <label for="search" class="visually-hidden">Поиск</label>
-        <input id="search" type="search" name="search" placeholder="Крем-брюле">
-      </form>
-      <a href="#">Вход</a>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <label for="login-email" class="visually-hidden">Логин</label>
-        <input id="login-email" type="email" name="login" placeholder="email@example.com" required>
-        <label for="login-password" class="visually-hidden">Пароль</label>
-        <input id="login-password" type="password" name="password" placeholder="••••••" required>
-        <button type="submit">Войти</button>
-        <a href="#">Забыли пароль?</a>
-        <a href="#">Новая регистрация</a>
-      </form>
-      <a href="#">2 товара</a>
-      <div>
-        <table>
-          <tr>
-            <td>
-              <button type="button" aria-label="Убрать товар из корзины"></button>
-            </td>
-            <td>
-              <img src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="33" height="33">
-            </td>
-            <td>
-              Пломбир с апельсиновым джемом
-            </td>
-            <td>
-              1,5 кг х <span>200 руб.</span>
-            </td>
-            <td>
-              300 руб.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button type="button" aria-label="Убрать товар из корзины"></button>
-            </td>
-            <td>
-              <img src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="33" height="33">
-            </td>
-            <td>
-              Клубничный пломбир с присыпкой из белого шоколада
-            </td>
-            <td>
-              1,5 кг х <span>300 руб.</span>
-            </td>
-            <td>
-              450 руб.
-            </td>
-          </tr>
-          <tr>
-            <td colspan="5">
-              <b>Итого: 750 руб.</b>
-            </td>
-          </tr>
-        </table>
-        <a href="#">Оформить заказ</a>
-      </div>
+      <section class="user-nav">
+        <a class="user-nav__link" href="#"><span class="visually-hidden">Поиск</span></a>
+        <form class="dropdown dropdown--search" action="https://echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="search">Поиск</label>
+          <input class="input dropdown__input" id="search" type="search" name="search" placeholder="Крем-брюле">
+        </form>
+        <a class="user-nav__link" href="#">Вход</a>
+        <form class="dropdown dropdown--login" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="login-email">Логин</label>
+          <input  class="input dropdown__input" id="login-email" type="email" name="login" placeholder="email@example.com" required>
+          <label class="visually-hidden" for="login-password">Пароль</label>
+          <input class="input dropdown__input" id="login-password" type="password" name="password" placeholder="••••••" required>
+          <button class="btn dropdown__btn" type="submit">Войти</button>
+          <a class="dark-link dropdown__extra-link" href="#">Забыли пароль?</a>
+          <a class="dark-link dropdown__extra-link" href="#">Новая регистрация</a>
+        </form>
+        <a class="user-nav__link" href="#">2 товара</a>
+        <div class="dropdown dropdown--order">
+          <!-- Вроде попыталась по БЭМ, но почему-то мне не нравится... может, лучше на дивах вместо таблицы? -->
+          <table class="basket dropdown__basket">
+            <tr class="item basket__item">
+              <td class="item__delete-btn">
+                <a class="dark-link" href="#" aria-label="Убрать товар из корзины">&times;</a>
+              </td>
+              <td class="item__img">
+                <img src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="33" height="33">
+              </td>
+              <td class="item__title">
+                Пломбир с апельсиновым джемом
+              </td>
+              <td class="item__quantity">
+                1,5 кг х <span>200 руб.</span>
+              </td>
+              <td class="item__price">
+                300 руб.
+              </td>
+            </tr>
+            <tr class="item basket__item">
+              <td class="item__delete-btn">
+                <a class="dark-link" href="#" aria-label="Убрать товар из корзины">&times;</a>
+              </td>
+              <td class="item__img">
+                <img src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="33" height="33">
+              </td>
+              <td class="item__title">
+                Клубничный пломбир с присыпкой из белого шоколада
+              </td>
+              <td class="item__quantity">
+                1,5 кг х <span>300 руб.</span>
+              </td>
+              <td class="item__price">
+                450 руб.
+              </td>
+            </tr>
+            <tr class="basket__total">
+              <td colspan="5">
+                <b>Итого: 750 руб.</b>
+              </td>
+            </tr>
+          </table>
+          <a class="btn dropdown__btn" href="#">Оформить заказ</a>
+        </div>
+      </section>
       <p>
         с 10 до 20, ежедневно
         <b>8 812 450-25-25</b>

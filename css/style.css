@@ -7,12 +7,14 @@
   --halflight: #5A5A5A;
   --link-active-light: #FFBC9E;
   --link-active-dark: #E84D37;
-  --underline-basic: rgba(50, 50, 50, 0.3);
+  --underline-basic-light: rgba(255, 255, 255, 0.3);
+  --underline-basic-dark: rgba(50, 50, 50, 0.3);
   --underline-active-light: rgba(255, 188, 158, 0.3);
   --underline-active-dark: rgba(232, 77, 55, 0.3);
   --btn-shadow-basic: rgba(172, 16, 0, 0.64);
   --btn-shadow-hover: #AC1000;
   --btn-shadow-active: #942718;
+  --btn-text-shadow: rgba(160, 32, 11, 0.76);
   --interactive-bg-basic: rgba(255, 255, 255, 0.2);
   --social-bg-basic: rgba(255, 255, 255, 0.8);
   --toggle-bg-hover: rgba(255, 255, 255, 0.4);
@@ -31,5 +33,174 @@
   --basket-text-weight: #000000;
   --basket-text-price: #ABABAB;
   --basket-border: #CACAC7;
-  --price-shadow: rgba(49, 50, 53, 0.5);
+  --price-text-shadow: rgba(49, 50, 53, 0.5);
+}
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Roboto", Arial, sans-serif;
+  color: var(--basic);
+  background-color: var(--page-bg-1);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-nav__link,
+.user-nav__link
+ {
+  color: var(--basic);
+}
+
+.main-nav__link {
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.user-nav__link {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  background-color: var(--interactive-bg-basic);
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus,
+.user-nav__link:hover,
+.user-nav__link:focus {
+  color: var(--dark);
+  background-color: var(--basic);
+}
+
+.main-nav__link:active,
+.user-nav__link:active {
+  color: var(--dark);
+  background-color: var(--nav-bg-active);
+}
+
+.main-nav__link--active {
+  background-color: var(--nav-bg-onpage);
+}
+
+.dropdown {
+  background-color: var(--form-bg-basic);
+}
+
+.btn {
+  background-image: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  color: var(--basic);
+  font-weight: 700;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  border: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);;
+}
+
+.btn:active {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+}
+
+.dark-link {
+  color: var(--dark);
+}
+
+.dark-link:hover,
+.dark-link:focus,
+.dark-link:active {
+  color: var(--link-active-dark);
+}
+
+.dropdown__link {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--dark);
+}
+
+.dropdown__link--highlight {
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.dropdown__link--active {
+  background-color: var(--nav-bg-onpage);
+  color: var(--basic);
+}
+
+.dropdown__link:hover,
+.dropdown__link:focus {
+  background-color: var(--dropdownlink-bg-hover);
+}
+
+.dropdown__link:active {
+  background-color: var(--dropdownlink-bg-active);
+}
+
+.dropdown__btn {
+  font-size: 18px;
+  line-height: 16px;
+  text-shadow: none;
+}
+
+.dropdown__extra-link {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.worktime {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.worktime__phone {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.promo__title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.slider__btn {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.dropdown__basket {
+  color: var(--dark);
+}
+
+.basket__item {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.basket__total {
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.item__quantity {
+  color: var(--basket-text-weight);
+}
+
+.item__quantity span {
+  color: var(--basket-text-price);
 }

@@ -7,54 +7,56 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
-      <a href="#">
-        <img src="img/index-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
+    <header class="header">
+      <a class="logo" href="#">
+        <img class="logo__image" src="img/index-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
       </a>
-      <nav>
-        <a href="#">Каталог</a>
-        <div>
-          <a href="#" class="highlight">Новинки</a>
-          <a href="catalog.html">Сливочное</a>
-          <a href="#">Щербеты</a>
-          <a href="#">Фруктовый лед</a>
-          <a href="#">Мелорин</a>
+      <nav class="main-nav">
+        <a class="main-nav__link" href="#">Каталог</a>
+        <div class="dropdown dropdown--sub-nav">
+          <a class="dropdown__link dropdown__link--highlight" href="#">Новинки</a>
+          <a class="dropdown__link" href="catalog.html">Сливочное</a>
+          <a class="dropdown__link" href="#">Щербеты</a>
+          <a class="dropdown__link" href="#">Фруктовый лед</a>
+          <a class="dropdown__link" href="#">Мелорин</a>
         </div>
-        <a href="#">Доставка и оплата</a>
-        <a href="#">О компании</a>
+        <a class="main-nav__link" href="#">Доставка и оплата</a>
+        <a class="main-nav__link" href="#">О компании</a>
       </nav>
-      <a href="#"><span class="visually-hidden">Поиск</span></a>
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <label for="search" class="visually-hidden">Поиск</label>
-        <input id="search" type="search" name="search" placeholder="Крем-брюле">
-      </form>
-      <a href="#">Вход</a>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <label for="login-email" class="visually-hidden">Логин</label>
-        <input id="login-email" type="email" name="login" placeholder="email@example.com" required>
-        <label for="login-password" class="visually-hidden">Пароль</label>
-        <input id="login-password" type="password" name="password" placeholder="••••••" required>
-        <button type="submit">Войти</button>
-        <a href="#">Забыли пароль?</a>
-        <a href="#">Новая регистрация</a>
-      </form>
-      <a href="#">Пусто</a>
-      <p>
+      <section class="user-nav">
+        <a class="user-nav__link" href="#"><span class="visually-hidden">Поиск</span></a>
+        <form class="dropdown dropdown--search" action="https://echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="search" >Поиск</label>
+          <input class="input dropdown__input" id="search" type="search" name="search" placeholder="Крем-брюле">
+        </form>
+        <a class="user-nav__link" href="#">Вход</a>
+        <form class="dropdown dropdown--login" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="login-email">Логин</label>
+          <input class="input dropdown__input" id="login-email" type="email" name="login" placeholder="email@example.com" required>
+          <label class="visually-hidden" for="login-password">Пароль</label>
+          <input class="input dropdown__input" id="login-password" type="password" name="password" placeholder="••••••" required>
+          <button class="btn dropdown__btn" type="submit">Войти</button>
+          <a class="dark-link dropdown__extra-link" href="#">Забыли пароль?</a>
+          <a class="dark-link dropdown__extra-link" href="#">Новая регистрация</a>
+        </form>
+        <a class="user-nav__link" href="#">Пусто</a>
+      </section>
+      <p class="worktime">
         с 10 до 20, ежедневно
-        <b>8 812 450-25-25</b>
+        <span class="worktime__phone">8 812 450-25-25</span>
       </p>
-      <section>
-        <div>
-          <img src="img/icecream-group1.png" alt="Два рожка мороженого: кремового и бело-малинового цветов" width="647" height="584">
-          <h2>Крем-брюле и пломбир с малиновым джемом</h2>
+      <section class="slider">
+        <div class="promo slider__item">
+          <img class="promo__img" src="img/icecream-group1.png" alt="Два рожка мороженого: кремового и бело-малинового цветов" width="647" height="584">
+          <h2 class="promo__title">Крем-брюле и пломбир с малиновым джемом</h2>
         </div>
-        <div>
-          <img src="img/icecream-group2.png" alt="Два рожка мороженого: шоколадного и лимонного цветов" width="644" height="582">
-          <h2>Шоколадный пломбир и лимонный сорбет</h2>
+        <div class="promo slider__item">
+          <img class="promo__img" src="img/icecream-group2.png" alt="Два рожка мороженого: шоколадного и лимонного цветов" width="644" height="582">
+          <h2 class="promo__title">Шоколадный пломбир и лимонный сорбет</h2>
         </div>
-        <div>
-          <img src="img/icecream-group3.png" alt="Два рожка мороженого: ванильного и розового цветов" width="639" height="582">
-          <h2>Пломбир с помадкой и клубничный щербет</h2>
+        <div class="promo slider__item">
+          <img class="promo__img" src="img/icecream-group3.png" alt="Два рожка мороженого: ванильного и розового цветов" width="639" height="582">
+          <h2 class="promo__title">Пломбир с помадкой и клубничный щербет</h2>
         </div>
         <div class="visually-hidden">
           <input id="btn-1" type="radio" name="toggle" checked>
@@ -66,7 +68,7 @@
           <label for="btn-2"><span class="visually-hidden">Переключатель промо: изображение 2</span></label>
           <label for="btn-3"><span class="visually-hidden">Переключатель промо: изображение 3</span></label>
         </div>
-        <a href="#">Давайте оба!</a>
+        <a class="btn slider__btn" href="#">Давайте оба!</a>
       </section>
     </header>
     <main>
@@ -184,7 +186,7 @@
     </footer>
     <div>
       <b>Мы обязательно вам ответим!</b>
-      <button type="button" aria-label="Закрыть форму"></button>
+      <button type="button" aria-label="Закрыть форму">&times;</button>
       <form action="https://echo.htmlacademy.ru" method="post">
         <label for="name" class="visually-hidden">Имя Фамилия</label>
         <input id="name" type="text" name="name" placeholder="Имя Фамилия">
