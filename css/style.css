@@ -65,7 +65,7 @@ img {
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-}0
+}
 
 .main-nav__link,
 .user-nav__link
@@ -272,4 +272,44 @@ img {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
+}
+
+.features {
+  color: var(--dark);
+  background-image: url("../img/waffle-bg.jpg");
+}
+
+.features__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.features__list {
+  list-style: none;
+}
+
+.news {
+  color: var(--dark);
+  background-image: url("../img/strawberry-bg.jpg");
+  background-repeat: no-repeat;
+}
+
+.news__text {
+  font-weight: 500;
+}
+
+.news__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.subscribe {
+  color: var(--dark);
+  background-color: var(--form-bg-basic);
+}
+
+.subscribe__text {
+  color: var(--halflight);
 }
