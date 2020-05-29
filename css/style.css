@@ -8,6 +8,7 @@
   --overlay: rgba(0, 0, 0, 0.3);
   --link-active-light: #FFBC9E;
   --link-active-dark: #E84D37;
+  --interactive-bg-basic: rgba(255, 255, 255, 0.2);
   --underline-basic-light: rgba(255, 255, 255, 0.3);
   --underline-basic-dark: rgba(50, 50, 50, 0.3);
   --underline-active-light: rgba(255, 188, 158, 0.3);
@@ -110,6 +111,7 @@ img {
 }
 
 .btn {
+  font: inherit;
   background-image: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   color: var(--basic);
   font-weight: 700;
@@ -252,23 +254,23 @@ img {
   font-size: 18px;
 }
 
-.hit__img {
+.article__img {
   border-radius: 50%;
 }
 
-.hit__price {
+.article__price {
   font-weight: 700;
   font-size: 45px;
   line-height: 45px;
   text-shadow: 0px 1px 3px var(--price-text-shadow);
 }
 
-.hit__price span {
+.article__price span {
   font-size: 30px;
   line-height: 35px;
 }
 
-.hit__title {
+.article__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -404,4 +406,60 @@ img {
   background-color: transparent;
   background-image: url("../img/cross-big.svg"); /* может тогда &times; из html кода убрать? */
   background-repeat: no-repeat;
+}
+
+.breadcrumbs__link {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.page-title {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.filters__item {
+  border: none;
+  font-weight: 500;
+}
+
+.filters__title {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filter {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: var(--interactive-bg-basic);
+}
+
+.filter--sorting {
+  border: none;
+  color: var(--basic);
+  -webkit-appearance: none;
+}
+
+.filter--sorting:hover,
+.filter--sorting:focus,
+.filter--sorting:active {
+  color: var(--dark);
+}
+
+.filter__btn {
+  font: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: var(--interactive-bg-basic);
+  color: var(--basic);
+  border: 2px solid var(--basic);
+}
+
+.filter__btn:hover,
+.filter__btn:focus,
+.filter__btn:active {
+  background-color: var(--form-bg-basic);
+  color: var(--dark);
 }

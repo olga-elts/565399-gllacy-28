@@ -86,173 +86,177 @@
           <a class="btn btn--dropdown dropdown__btn" href="#">Оформить заказ</a>
         </div>
       </section>
-      <p>
+      <p class="worktime">
         с 10 до 20, ежедневно
-        <b>8 812 450-25-25</b>
+        <span class="worktime__phone">8 812 450-25-25</span>
       </p>
     </header>
-    <main>
+    <main class="container">
       <nav class="breadcrumbs">
-        <a href="index.html">Главная</a>
-        <a href="#">Каталог</a>
-        <span>Сливочное</span>
+        <a class="light-link breadcrumbs__link" href="index.html">Главная</a>
+        <a class="light-link breadcrumbs__link" href="#">Каталог</a>
+        <span class="breadcrumbs__link breadcrumbs__link--current">Сливочное</span>
       </nav>
-      <h1>Сливочное мороженое</h1>
-      <section>
-        <form action="https://echo.htmlacademy.ru" method="post"> <!-- Или "get"? -->
-          <fieldset>
-            <legend>Сортировка:</legend>
-              <select name="sorting order">
+      <h1 class="page-title">Сливочное мороженое</h1>
+      <section class="filters">
+        <form class="filters__form" action="https://echo.htmlacademy.ru" method="post"> <!-- Или "get"? -->
+          <fieldset class="filters__item filters__item--sorting">
+            <legend class="filters__title">Сортировка:</legend>
+              <select class="filter filter--sorting" name="sorting order">
                 <option value="popular" selected>по популярности</option>
                 <option value="price up">сначала недорогие</option>
                 <option value="price down">сначала дорогие</option>
                 <option value="fat">по жирности</option>
               </select>
           </fieldset>
-          <fieldset>
-            <legend>Цена: 100 ₽ – 500 ₽</legend>
-            <div>
+          <fieldset class="filters__item filters__item--price">
+            <legend class="filters__title">Цена: 100 ₽ – 500 ₽</legend>
+            <div class="filter filter--price">
               <!-- Хитрый фильтр -->
             </div>
           </fieldset>
-          <fieldset>
-            <legend>Жирность:</legend>
+          <fieldset class="filters__item filters__item--fat">
+            <legend class="filters__title">Жирность:</legend>
+            <div class="filter filter--fat">
               <label><input type="radio" name="fat" value="0%">0%</label>
               <label><input type="radio" name="fat" value="less than 10%" checked>до 10%</label>
               <label><input type="radio" name="fat" value="less than 30%">до 30%</label>
               <label><input type="radio" name="fat" value="greater than 30%">выше 30%</label>
+            </div>
           </fieldset>
-          <fieldset>
-            <legend>Наполнители:</legend>
-            <label><input type="checkbox" name="chocolate" checked>шоколадные</label>
-            <label><input type="checkbox" name="sprinkles" checked>сахарные присыпки</label>
-            <label><input type="checkbox" name="fruits">фрукты</label>
-            <label><input type="checkbox" name="syrups">сиропы</label>
-            <label><input type="checkbox" name="jam">джемы</label>
+          <fieldset  class="filters__item filters__item--toppings">
+            <legend class="filters__title">Наполнители:</legend>
+            <div class="filter filter--toppings">
+              <label><input type="checkbox" name="chocolate" checked>шоколадные</label>
+              <label><input type="checkbox" name="sprinkles" checked>сахарные присыпки</label>
+              <label><input type="checkbox" name="fruits">фрукты</label>
+              <label><input type="checkbox" name="syrups">сиропы</label>
+              <label><input type="checkbox" name="jam">джемы</label>
+            </div>
           </fieldset>
-          <button type="submit">Применить</button>
+          <button class="filter__btn" type="submit">Применить</button>
         </form>
       </section>
-      <section>
-        <article>
+      <section class="catalog">
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета">
+            <img class="article__img" src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета">
           </a>
-          <p>310 ₽<span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
+          <p class="article__price">310 ₽<span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-coffee.jpg" alt="Мороженое цвета кофе с молоком с шоколадными кусочками" width="267" height="267">
+            <img class="article__img" src="img/cream-coffee.jpg" alt="Мороженое цвета кофе с молоком с шоколадными кусочками" width="267" height="267">
           </a>
-          <p>380 ₽<span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочно-кофейное с кусочками шоколада</h2>
+          <p class="article__price">380 ₽<span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочно-кофейное с кусочками шоколада</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="267" height="267">
+            <img class="article__img" src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="267" height="267">
           </a>
-          <p>355 ₽<span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочно-клубничное с присыпкой из белого шоколада</h2>
+          <p class="article__price">355 ₽<span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочно-клубничное с присыпкой из белого шоколада</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-brulee.jpg" alt="Мороженое кремового цвета с карамелью" width="267" height="267">
+            <img class="article__img" src="img/cream-brulee.jpg" alt="Мороженое кремового цвета с карамелью" width="267" height="267">
           </a>
-          <p>415 ₽<span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочное крем-брюле с карамельной подливкой</h2>
+          <p class="article__price">415 ₽<span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочное крем-брюле с карамельной подливкой</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-cowberry.jpg" alt="Мороженое белого цвета с красным джемом" width="267" height="267">
+            <img class="article__img" src="img/cream-cowberry.jpg" alt="Мороженое белого цвета с красным джемом" width="267" height="267">
           </a>
-          <p>325 &#8381; <span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочное с брусничным джемом</h2>
+          <p class="article__price">325 &#8381; <span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочное с брусничным джемом</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-blueberry.jpg" alt="Мороженое сиреневого цвета с ягодами черники" width="267" height="267">
+            <img class="article__img" src="img/cream-blueberry.jpg" alt="Мороженое сиреневого цвета с ягодами черники" width="267" height="267">
           </a>
-          <p>410 &#8381; <span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочно-черничное с цельными ягодами черники</h2>
+          <p class="article__price">410 &#8381; <span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочно-черничное с цельными ягодами черники</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-lemon.jpg" alt="Мороженое желтого цвета с разноцветной посыпкой" width="267" height="267">
+            <img class="article__img" src="img/cream-lemon.jpg" alt="Мороженое желтого цвета с разноцветной посыпкой" width="267" height="267">
           </a>
-          <p>315 &#8381; <span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочно-лимонное с карамельной присыпкой</h2>
+          <p class="article__price">315 &#8381; <span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочно-лимонное с карамельной присыпкой</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-chocochip.jpg" alt="Мороженое белого цвета с шоколадной стружкой" width="267" height="267">
+            <img class="article__img" src="img/cream-chocochip.jpg" alt="Мороженое белого цвета с шоколадной стружкой" width="267" height="267">
           </a>
-          <p>320 &#8381; <span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочное с шоколадной стружкой</h2>
+          <p class="article__price">320 &#8381; <span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочное с шоколадной стружкой</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-vanilla.jpg" alt="Мороженое ванильного цвета с кусочками шоколада" width="267" height="267">
+            <img class="article__img" src="img/cream-vanilla.jpg" alt="Мороженое ванильного цвета с кусочками шоколада" width="267" height="267">
           </a>
-          <p>440 &#8381; <span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочно-ванильное с кусочками шоколада</h2>
+          <p class="article__price">440 &#8381; <span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочно-ванильное с кусочками шоколада</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-menthol.jpg" alt="Мороженое голубого цвета" width="267" height="267">
+            <img class="article__img" src="img/cream-menthol.jpg" alt="Мороженое голубого цвета" width="267" height="267">
           </a>
-          <p>435 &#8381; <span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочноe с ментоловым сиропом</h2>
+          <p class="article__price">435 &#8381; <span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочноe с ментоловым сиропом</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-chocolate.jpg" alt="Мороженое белого цвета с кусочками черного шоколада" width="267" height="267">
+            <img class="article__img" src="img/cream-chocolate.jpg" alt="Мороженое белого цвета с кусочками черного шоколада" width="267" height="267">
           </a>
-          <p>355 &#8381; <span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочное с кусочками черного шоколада</h2>
+          <p class="article__price">355 &#8381; <span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочное с кусочками черного шоколада</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="article catalog__article">
           <a href="#">
-            <img src="img/cream-mint.jpg" alt="Мороженое светло-зеленого цвета" width="267" height="267">
+            <img class="article__img" src="img/cream-mint.jpg" alt="Мороженое светло-зеленого цвета" width="267" height="267">
           </a>
-          <p>420 &#8381; <span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочное с мятным сиропом</h2>
+          <p class="article__price">420 &#8381; <span>/кг</span></p>
+          <a class="light-link article__link" href="#">
+            <h2 class="article__title">Сливочное с мятным сиропом</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
         <div>
           <a href="#">Назад</a>
