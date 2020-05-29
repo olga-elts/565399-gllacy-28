@@ -35,7 +35,7 @@
           <input class="input dropdown__input" id="login-email" type="email" name="login" placeholder="email@example.com" required>
           <label class="visually-hidden" for="login-password">Пароль</label>
           <input class="input dropdown__input" id="login-password" type="password" name="password" placeholder="••••••" required>
-          <button class="btn dropdown__btn" type="submit">Войти</button>
+          <button class="btn btn--dropdown dropdown__btn" type="submit">Войти</button>
           <a class="dark-link dropdown__extra-link" href="#">Забыли пароль?</a>
           <a class="dark-link dropdown__extra-link" href="#">Новая регистрация</a>
         </form>
@@ -68,63 +68,67 @@
           <label for="btn-2"><span class="visually-hidden">Переключатель промо: изображение 2</span></label>
           <label for="btn-3"><span class="visually-hidden">Переключатель промо: изображение 3</span></label>
         </div>
-        <a class="btn slider__btn" href="#">Давайте оба!</a>
+        <a class="btn btn--slider slider__btn" href="#">Давайте оба!</a>
       </section>
     </header>
-    <main>
-      <h1>Магазин мороженого Gllasy Shop</h1>
-      <section>
-        <article>
-          <h2>Малинка даром!</h2>
-          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a href="#">Хочу варенье!</a>
-        </article>
-        <article>
-          <h2>Шоколадки даром!</h2>
-          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a href="#">Хочу шоколадки!</a>
-        </article>
+    <main class="container">
+      <h1 class="visually-hidden">Магазин мороженого Gllasy Shop</h1>
+      <section class="offers">
+        <div class="offers__item">
+          <article class="offer offer--1">
+            <h2 class="offer__title">Малинка даром!</h2>
+            <p class="offer__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a class="btn offer__btn" href="#">Хочу варенье!</a>
+          </article>
+        </div>
+        <div class="offers__item">
+          <article class="offer offer--2">
+            <h2 class="offer__title">Шоколадки даром!</h2>
+            <p class="offer__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+            <a class="btn offer__btn" href="#">Хочу шоколадки!</a>
+          </article>
+        </div>
       </section>
-      <section>
-        <article>
+      <section class="hits">
+        <article class="hit hits__item">
           <a href="#">
-            <img src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="267" height="267">
+            <img class="hit__img" src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="267" height="267">
           </a>
-          <p>310 ₽<span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
+          <p class="hit__price">310 ₽<span>/кг</span></p>
+          <a class="light-link hit__link" href="#">
+            <h2 class="hit__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn hit__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="hit hits__item">
           <a href="#">
-            <img src="img/cream-coffee.jpg" alt="Мороженое цвета кофе с молоком с шоколадными кусочками" width="267" height="267">
+            <img class="hit__img" class="hit__img" src="img/cream-coffee.jpg" alt="Мороженое цвета кофе с молоком с шоколадными кусочками" width="267" height="267">
           </a>
-          <p>380 ₽<span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочно-кофейное с кусочками шоколада</h2>
+          <p class="hit__price">380 ₽<span>/кг</span></p>
+          <a class="light-link hit__link" href="#">
+            <h2 class="hit__title">Сливочно-кофейное с кусочками шоколада</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn hit__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="hit hits__item">
           <a href="#">
-            <img src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="267" height="267">
+            <img class="hit__img" src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="267" height="267">
           </a>
-          <p>355 ₽<span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочно-клубничное с присыпкой из белого шоколада</h2>
+          <p class="hit__price">355 ₽<span>/кг</span></p>
+          <a class="light-link hit__link" href="#">
+            <h2 class="hit__title">Сливочно-клубничное с присыпкой из белого шоколада</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn hit__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article>
+        <article class="hit hits__item">
           <a href="#">
-            <img src="img/cream-brulee.jpg" alt="Мороженое кремового цвета с карамелью" width="267" height="267">
+            <img class="hit__img" src="img/cream-brulee.jpg" alt="Мороженое кремового цвета с карамелью" width="267" height="267">
           </a>
-          <p>415 ₽<span>/кг</span></p>
-          <a href="#">
-            <h2>Сливочное крем-брюле с карамельной подливкой</h2>
+          <p class="hit__price">415 ₽<span>/кг</span></p>
+          <a class="light-link hit__link" href="#">
+            <h2 class="hit__title">Сливочное крем-брюле с карамельной подливкой</h2>
           </a>
-          <a href="#">Быстрый просмотр</a>
+          <a class="btn hit__btn" href="#">Быстрый просмотр</a>
         </article>
       </section>
       <section>
