@@ -26,7 +26,7 @@
       <section class="user-nav">
         <a class="user-nav__link" href="#"><span class="visually-hidden">Поиск</span></a>
         <form class="dropdown dropdown--search" action="https://echo.htmlacademy.ru" method="get">
-          <label class="visually-hidden" for="search" >Поиск</label>
+          <label class="visually-hidden" for="search">Поиск</label>
           <input class="input dropdown__input" id="search" type="search" name="search" placeholder="Крем-брюле">
         </form>
         <a class="user-nav__link" href="#">Вход</a>
@@ -152,9 +152,9 @@
           <button class="btn form__btn" type="submit">Отправить</button>
         </form>
       </article>
-      <section>
-        <img src="img/map.png" alt="Карта района г. Санкт-Петербурга в границах наб. реки Мойки, Садовая ул., Невский проспект" width="1200" height="430">
-        <section>
+      <section class="contacts">
+        <img class="contacts__map" src="img/map.png" alt="Карта района г. Санкт-Петербурга в границах наб. реки Мойки, Садовая ул., Невский проспект" width="1200" height="430">
+        <section class="info contacts__info" >
           <p>
             Адрес главного офиса и&nbsp;офлайн-магазина:
             <b>ул. Большая Конюшенная, 19/8, Санкт-Петербург</b>
@@ -164,40 +164,40 @@
             <b>8 812 450-25-25</b>
             (с 10 до 20 ежедневно)
           </p>
-          <a href="#">Форма обратной связи</a>
+          <a class="btn contacts__btn" href="#">Форма обратной связи</a>
         </section>
       </section>
     </main>
-    <footer>
-      <section>
-        <a href="#"><span class="visually-hidden">Facebook</span></a>
-        <a href="#"><span class="visually-hidden">Вконтакте</span></a>
-        <a href="#"><span class="visually-hidden">Instagram</span></a>
-        <a href="#"><span class="visually-hidden">Twitter</span></a>
+    <footer class="footer">
+      <section class="social">
+        <a class="social__item social__item--facebook" href="#"><span class="visually-hidden">Facebook</span></a>
+        <a class="social__item social__item--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
+        <a class="social__item social__item--instagram" href="#"><span class="visually-hidden">Instagram</span></a>
+        <a class="social__item social__item--twitter" href="#"><span class="visually-hidden">Twitter</span></a>
       </section>
-      <section>
-        <a href="#" class="spotlight">Для поставщиков</a>
-        <a href="#">О производстве</a>
-        <a href="#">Наши документы</a>
-        <a href="#">Экологические стандарты</a>
+      <section class="menu">
+        <a class="light-link menu__link menu__link--spotlight" href="#">Для поставщиков</a>
+        <a class="light-link menu__link" href="#">О производстве</a>
+        <a class="light-link menu__link" href="#">Наши документы</a>
+        <a class="light-link menu__link" href="#">Экологические стандарты</a>
       </section>
-      <sectopn>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
+      <sectopn class="developer">
+        <a class="developer__logo" href="https://htmlacademy.ru/intensive/htmlcss">
           <span class="visually-hidden">Логотип HTML Academy</span>
         </a>
-        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
+        <p class="developer__copyright">Сделано в <a class="light-link " href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
       </sectopn>
     </footer>
-    <div>
-      <b>Мы обязательно вам ответим!</b>
-      <button type="button" aria-label="Закрыть форму">&times;</button>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <label for="name" class="visually-hidden">Имя Фамилия</label>
-        <input id="name" type="text" name="name" placeholder="Имя Фамилия">
-        <label for="email" class="visually-hidden">Элетронная почта</label>
-        <input id="email" type="email" name="email" placeholder="email@example.com" required>
-        <textarea name="customer-request" placeholder="В свободной форме"></textarea>
-        <button type="submit">Отправить</button>
+    <div class="dropdown dropdown--popup">
+      <b class="dropdown__title">Мы обязательно вам ответим!</b>
+      <button class="dropdown__close-btn" type="button" aria-label="Закрыть форму">&times;</button>
+      <form class="dropdown__form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="name">Имя Фамилия</label>
+        <input class="input dropdown__input" id="name" type="text" name="name" placeholder="Имя Фамилия">
+        <label class="visually-hidden" for="email">Элетронная почта</label>
+        <input class="input dropdown__input" id="email" type="email" name="email" placeholder="email@example.com" required>
+        <textarea class="textarea dropdown__textarea" name="customer-request" placeholder="В свободной форме"></textarea>
+        <button class="btn" type="submit">Отправить</button>
       </form>
     </div>
   </body>

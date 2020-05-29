@@ -5,6 +5,7 @@
   --basic: #FFFFFF;
   --dark: #323232;
   --halflight: #5A5A5A;
+  --overlay: rgba(0, 0, 0, 0.3);
   --link-active-light: #FFBC9E;
   --link-active-dark: #E84D37;
   --underline-basic-light: rgba(255, 255, 255, 0.3);
@@ -15,9 +16,9 @@
   --btn-shadow-hover: #AC1000;
   --btn-shadow-active: #942718;
   --btn-text-shadow: rgba(160, 32, 11, 0.76);
-  --interactive-bg-basic: rgba(255, 255, 255, 0.2);
-  --social-bg-basic: rgba(255, 255, 255, 0.8);
+  --social-border-basic: rgba(255, 255, 255, 0.5);
   --toggle-bg-hover: rgba(255, 255, 255, 0.4);
+  --contacts-bg-basic: #FEFEFE;
   --form-bg-basic: #F8F7F4;
   --form-shadow: rgba(0, 0, 0, 0.4);
   --input-border: #D3D3D2;
@@ -312,4 +313,95 @@ img {
 
 .subscribe__text {
   color: var(--halflight);
+}
+
+.contacts {
+  color: var(--dark);
+}
+
+.contacts__info {
+  background-color: var(--contacts-bg-basic);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts__info b {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+
+.social__item {
+  display: inline-block; /* пока просто чтобы посмотреть на иконки */
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  border: 2px solid var(--social-border-basic);
+  border-radius: 50%;
+}
+
+.social__item:hover,
+.social__item:focus,
+.social__item:active {
+  opacity: 1;
+}
+
+.social__item--facebook {
+  background-image: url("../img/facebook.svg");
+}
+
+.social__item--vk {
+  background-image: url("../img/vk.svg");
+}
+
+.social__item--instagram  {
+  background-image: url("../img/instagram.svg");
+  background-repeat: no-repeat;
+}
+
+.social__item--twitter {
+  background-image: url("../img/twitter.svg");
+}
+
+.menu {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.menu__link--spotlight {
+  font-weight: 700;
+}
+
+.developer__logo {
+  display: inline-block; /* пока просто чтобы посмотреть на иконки */
+  width: 108px;
+  height: 39px;
+  background-image: url("../img/htmlacademy-logo.svg");
+  background-repeat: no-repeat;
+}
+
+.developer__copyright {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.dropdown--popup {
+  color: var(--dark);
+}
+
+.dropdown__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.dropdown__close-btn {
+  width: 18px;
+  height: 17px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/cross-big.svg"); /* может тогда &times; из html кода убрать? */
+  background-repeat: no-repeat;
 }
