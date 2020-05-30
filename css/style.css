@@ -258,6 +258,10 @@ img {
   border-radius: 50%;
 }
 
+.article:hover {
+  background-color: var(--interactive-bg-basic);
+}
+
 .article__price {
   font-weight: 700;
   font-size: 45px;
@@ -331,7 +335,6 @@ img {
   font-size: 18px;
   line-height: 24px;
 }
-
 
 .social__item {
   display: inline-block; /* пока просто чтобы посмотреть на иконки */
@@ -462,4 +465,21 @@ img {
 .filter__btn:active {
   background-color: var(--form-bg-basic);
   color: var(--dark);
+}
+
+.pagination__link {
+  color: var(--basic);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.pagination__link:hover {
+  background-color: var(--interactive-bg-basic);
+}
+
+.pagination__link:active,
+.pagination__link--active {
+  color: var(--dark);
+  background-color: var(--basic);
 }
