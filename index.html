@@ -74,23 +74,19 @@
     <main class="container">
       <h1 class="visually-hidden">Магазин мороженого Gllasy Shop</h1>
       <section class="offers">
-        <div class="offers__item">
-          <article class="offer offer--1">
-            <h2 class="offer__title">Малинка даром!</h2>
-            <p class="offer__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a class="btn offer__btn" href="#">Хочу варенье!</a>
-          </article>
-        </div>
-        <div class="offers__item">
-          <article class="offer offer--2">
-            <h2 class="offer__title">Шоколадки даром!</h2>
-            <p class="offer__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a class="btn offer__btn" href="#">Хочу шоколадки!</a>
-          </article>
-        </div>
+        <article class="offer offer--raspberry">
+          <h2 class="offer__title">Малинка даром!</h2>
+          <p class="offer__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <a class="btn offer__btn" href="#">Хочу варенье!</a>
+        </article>
+        <article class="offer offer--chocolate">
+          <h2 class="offer__title">Шоколадки даром!</h2>
+          <p class="offer__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <a class="btn offer__btn" href="#">Хочу шоколадки!</a>
+        </article>
       </section>
       <section class="hits">
-        <article class="article hits__article">
+        <article class="article article--hit">
           <a href="#">
             <img class="article__img" src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="267" height="267">
           </a>
@@ -100,7 +96,7 @@
           </a>
           <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article class="articlehits__article">
+        <article class="article article--hit">
           <a href="#">
             <img class="article__img" class="hit__img" src="img/cream-coffee.jpg" alt="Мороженое цвета кофе с молоком с шоколадными кусочками" width="267" height="267">
           </a>
@@ -110,7 +106,7 @@
           </a>
           <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article class="article hits__article">
+        <article class="article article--hit">
           <a href="#">
             <img class="article__img" src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="267" height="267">
           </a>
@@ -120,7 +116,7 @@
           </a>
           <a class="btn article__btn" href="#">Быстрый просмотр</a>
         </article>
-        <article class="article hits__article">
+        <article class="article article--hit">
           <a href="#">
             <img class="article__img" src="img/cream-brulee.jpg" alt="Мороженое кремового цвета с карамелью" width="267" height="267">
           </a>
@@ -185,18 +181,18 @@
         <a class="developer__logo" href="https://htmlacademy.ru/intensive/htmlcss">
           <span class="visually-hidden">Логотип HTML Academy</span>
         </a>
-        <p class="developer__copyright">Сделано в <a class="light-link " href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
+        <p class="developer__copyright">Сделано в <a class="light-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
       </sectopn>
     </footer>
-    <div class="dropdown dropdown--popup">
-      <b class="dropdown__title">Мы обязательно вам ответим!</b>
-      <button class="dropdown__close-btn" type="button" aria-label="Закрыть форму">&times;</button>
-      <form class="dropdown__form" action="https://echo.htmlacademy.ru" method="post">
+    <div class="popup">
+      <b class="popup__title">Мы обязательно вам ответим!</b>
+      <button class="popup__close-btn" type="button" aria-label="Закрыть форму">&times;</button>
+      <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="name">Имя Фамилия</label>
-        <input class="input dropdown__input" id="name" type="text" name="name" placeholder="Имя Фамилия">
+        <input class="input popup__input" id="name" type="text" name="name" placeholder="Имя Фамилия">
         <label class="visually-hidden" for="email">Элетронная почта</label>
-        <input class="input dropdown__input" id="email" type="email" name="email" placeholder="email@example.com" required>
-        <textarea class="textarea dropdown__textarea" name="customer-request" placeholder="В свободной форме"></textarea>
+        <input class="input popup__input" id="email" type="email" name="email" placeholder="email@example.com" required>
+        <textarea class="textarea popup__textarea" name="customer-request" placeholder="В свободной форме"></textarea>
         <button class="btn" type="submit">Отправить</button>
       </form>
     </div>

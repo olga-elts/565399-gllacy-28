@@ -6,6 +6,9 @@
   --dark: #323232;
   --halflight: #5A5A5A;
   --overlay: rgba(0, 0, 0, 0.3);
+  --offer-bg-raspberry: #83112E;
+  --offer-bg-chocolate: #48261B;
+  --features-bg: #EEDFC2;
   --link-active-light: #FFBC9E;
   --link-active-dark: #E84D37;
   --interactive-bg-basic: rgba(255, 255, 255, 0.2);
@@ -41,10 +44,9 @@
 body {
   min-width: 1200px;
   margin: 0;
-  padding: 0;
   font-size: 16px;
   line-height: 22px;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   color: var(--basic);
   background-color: var(--page-bg-1);
 }
@@ -58,20 +60,26 @@ img {
   height: auto;
 }
 
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-nav__link,
-.user-nav__link
- {
+.user-nav__link {
   color: var(--basic);
 }
 
@@ -111,7 +119,6 @@ img {
 }
 
 .btn {
-  font: inherit;
   background-image: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   color: var(--basic);
   font-weight: 700;
@@ -237,11 +244,13 @@ img {
   font-weight: 700;
 }
 
-.offer--1 {
+.offer--raspberry {
+  background-color: var(--offer-bg-raspberry);
   background-image: url("../img/raspberry-bg.jpg");
 }
 
-.offer--2 {
+.offer--chocolate {
+  background-color: var(--offer-bg-chocolate);
   background-image: url("../img/chocolate-bg.jpg");
 }
 
@@ -283,6 +292,7 @@ img {
 
 .features {
   color: var(--dark);
+  background-color: var(--features-bg);
   background-image: url("../img/waffle-bg.jpg");
 }
 
@@ -298,6 +308,7 @@ img {
 
 .news {
   color: var(--dark);
+  background-color: var(--basic);
   background-image: url("../img/strawberry-bg.jpg");
   background-repeat: no-repeat;
 }
@@ -362,7 +373,6 @@ img {
 
 .social__item--instagram  {
   background-image: url("../img/instagram.svg");
-  background-repeat: no-repeat;
 }
 
 .social__item--twitter {
@@ -391,29 +401,40 @@ img {
   line-height: 18px;
 }
 
-.dropdown--popup {
+.popup {
   color: var(--dark);
 }
 
-.dropdown__title {
+.popup__title {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
 }
 
-.dropdown__close-btn {
+.popup__close-btn {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
   width: 18px;
   height: 17px;
   border: none;
   background-color: transparent;
-  background-image: url("../img/cross-big.svg"); /* может тогда &times; из html кода убрать? */
+  background-image: url("../img/cross-big.svg");
   background-repeat: no-repeat;
 }
 
 .breadcrumbs__link {
   font-size: 14px;
   line-height: 16px;
+  color: var(--basic);
+}
+
+breadcrumbs__link:hover,
+breadcrumbs__link:focus,
+breadcrumbs__link:active {
+  color: var(--link-active-light);
 }
 
 .page-title {
@@ -448,10 +469,10 @@ img {
 .filter--sorting:focus,
 .filter--sorting:active {
   color: var(--dark);
+  background-color: var(--basic);
 }
 
 .filter__btn {
-  font: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
