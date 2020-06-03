@@ -209,6 +209,25 @@ textarea {
   text-align: center;
 }
 
+.toggle {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+}
+
+.toggle--active,
+.toggle:active {
+  background-color: var(--basic);
+}
+
+.toggle:focus,
+.toggle:hover {
+  background-color: var(--toggle-bg-hover);
+}
+
 .btn--slider {
   font-size: 32px;
   line-height: 44px;
