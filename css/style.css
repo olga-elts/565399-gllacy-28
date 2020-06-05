@@ -1,3 +1,17 @@
+/*
+- кастомные цвета
+- глобальные стили
+- стили header (в т.ч. выпадающие меню, формы, корзина)
+- слайдер
+- стили index. html раздел main: баннеры, хиты, CEO, новости, подписка, карта
+- стили футер
+- popup
+- хлебные крошки
+- фильтр
+- товары
+- пагинация
+*/
+
 :root {
   --page-bg-1: #849D8F;
   --page-bg-2: #8996A6;
@@ -25,7 +39,7 @@
   --contacts-bg-basic: #FEFEFE;
   --form-bg-basic: #F8F7F4;
   --form-shadow: rgba(0, 0, 0, 0.4);
-  --input-border: #D3D3D2;
+  --dropdown-input-border: #D3D3D2;
   --input-border-basic: rgba(178, 178, 178, 0.52);
   --input-border-focus: rgba(46, 136, 228, 0.52);
   --placeholder-text: #999999;
@@ -34,10 +48,10 @@
   --nav-bg-onpage: #D07058;
   --dropdownlink-bg-hover: #FBDED7;
   --dropdownlink-bg-active: #F6B5A5;
-  --dropdown-border: rgba(50, 50, 50, 0.2);
+  --dropdown-separate: rgba(50, 50, 50, 0.2);
   --basket-text-weight: #000000;
   --basket-text-price: #ABABAB;
-  --basket-border: #CACAC7;
+  --basket-separate: #CACAC7;
   --price-text-shadow: rgba(49, 50, 53, 0.5);
 }
 
@@ -163,11 +177,6 @@ textarea {
   background-color: var(--nav-bg-onpage);
 }
 
-.dropdown {
-  display: none;
-  background-color: var(--form-bg-basic);
-}
-
 .input {
   padding: 10px 14px;
   font-size: 16px;
@@ -202,6 +211,10 @@ textarea {
   box-shadow: inset 0px 2px 2px var(--btn-shadow-active);
 }
 
+.btn--dropdown {
+  text-shadow: none;
+}
+
 .dark-link {
   color: var(--dark);
   text-decoration: underline var(--underline-basic-dark);
@@ -224,6 +237,11 @@ textarea {
 .light-link:active {
   color: var(--link-active-light);
   text-decoration: underline var(--underline-active-light);
+}
+
+.dropdown {
+  display: none;
+  background-color: var(--form-bg-basic);
 }
 
 .dropdown__link {
@@ -250,14 +268,32 @@ textarea {
   background-color: var(--dropdownlink-bg-active);
 }
 
-.btn--dropdown {
-  line-height: 16px;
-  text-shadow: none;
-}
-
 .dropdown__extra-link {
   font-size: 13px;
-  line-height: 15px;
+  line-height: 1.375;
+}
+
+.dropdown__basket {
+  color: var(--dark);
+}
+
+.basket__item {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.basket__total {
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.item__quantity {
+  color: var(--basket-text-weight);
+}
+
+.item__quantity span {
+  color: var(--basket-text-price);
 }
 
 .worktime {
@@ -347,29 +383,6 @@ textarea {
 .toggle:focus,
 .toggle:hover {
   background-color: var(--toggle-bg-hover);
-}
-
-.dropdown__basket {
-  color: var(--dark);
-}
-
-.basket__item {
-  font-size: 13px;
-  line-height: 16px;
-}
-
-.basket__total {
-  font-size: 15px;
-  line-height: 16px;
-  font-weight: 700;
-}
-
-.item__quantity {
-  color: var(--basket-text-weight);
-}
-
-.item__quantity span {
-  color: var(--basket-text-price);
 }
 
 .container {
@@ -771,6 +784,7 @@ breadcrumbs__link:active {
 .filters__title {
   margin-left: 16px;
   margin-bottom: 7px;
+  padding: 0;
   font-size: 14px;
   line-height: 16px;
 }
