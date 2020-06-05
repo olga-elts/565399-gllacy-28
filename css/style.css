@@ -61,6 +61,11 @@ img {
   height: auto;
 }
 
+.wrapper {
+  width: 1146px;
+  margin: 0 auto;
+}
+
 button,
 input,
 select,
@@ -86,7 +91,6 @@ textarea {
 }
 
 .header {
-  width: 1146px;
   margin-bottom: 40px;
 }
 
@@ -363,9 +367,10 @@ textarea {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 560px);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 26px;
   row-gap: 40px;
+  margin-bottom: 18px;
 }
 
 .offer {
@@ -424,7 +429,7 @@ textarea {
 }
 
 .article__img {
-  margin-bottom: 11px;
+  margin-bottom: 15px;
   border-radius: 50%;
   display: block;
 }
@@ -467,7 +472,7 @@ textarea {
 .features {
   grid-column: 1/-1;
   min-height: 306px;
-  padding: 24px 20px 36px 20px;
+  padding: 24px 20px 28px 20px;
   color: var(--dark);
   background-color: var(--features-bg);
   background-image: url("../img/waffle-bg.jpg");
@@ -486,7 +491,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(2, calc((100% - 26px)/2));
   column-gap: 26px;
-  row-gap: 33px;
+  row-gap: 26px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -570,7 +575,7 @@ textarea {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 303px;
-  padding: 32px 25px;
+  padding: 31px 25px;
   font-size: 14px;
   line-height: 20px;
   background-color: var(--contacts-bg-basic);
@@ -579,7 +584,7 @@ textarea {
 
 .contacts__info p {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .contacts__info b {
@@ -594,14 +599,32 @@ textarea {
   border-radius: 70px;
 }
 
+.contacts__map {
+  display: block;
+}
+
+.footer {
+  display: flex;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .social__item {
-  display: inline-block; /* пока просто чтобы посмотреть на иконки */
+  display: block;
   width: 36px;
   height: 36px;
   background-repeat: no-repeat;
   opacity: 0.8;
   border: 2px solid var(--social-border-basic);
   border-radius: 50%;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .social__item:hover,
@@ -627,28 +650,50 @@ textarea {
 }
 
 .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  width: 327px;
+  margin: 0 auto;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 1.375;
+
+}
+
+.menu__link {
+  width: 50%;
+}
+
+.menu__link:nth-child(2n+1) {
+  padding-left: 22px;
 }
 
 .menu__link--spotlight {
   font-weight: 700;
 }
 
+.developer {
+
+}
+
 .developer__logo {
-  display: inline-block; /* пока просто чтобы посмотреть на иконки */
+  display: block; /* пока просто чтобы посмотреть на иконки */
   width: 108px;
   height: 39px;
+  margin-bottom: 6px;
   background-image: url("../img/htmlacademy-logo.svg");
   background-repeat: no-repeat;
 }
 
 .developer__copyright {
+  margin: 0;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1.375;
 }
 
 .popup {
+  display: none;
   color: var(--dark);
 }
 
