@@ -8,62 +8,68 @@
   </head>
   <body>
     <header class="header">
-      <a class="logo" href="#">
-        <img class="logo__image" src="img/index-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
-      </a>
-      <nav class="main-nav">
-        <a class="main-nav__link" href="#">Каталог</a>
-        <div class="dropdown dropdown--sub-nav">
-          <a class="dropdown__link dropdown__link--highlight" href="#">Новинки</a>
-          <a class="dropdown__link" href="catalog.html">Сливочное</a>
-          <a class="dropdown__link" href="#">Щербеты</a>
-          <a class="dropdown__link" href="#">Фруктовый лед</a>
-          <a class="dropdown__link" href="#">Мелорин</a>
-        </div>
-        <a class="main-nav__link" href="#">Доставка и оплата</a>
-        <a class="main-nav__link" href="#">О компании</a>
-      </nav>
-      <section class="user-nav">
-        <a class="user-nav__link" href="#"><span class="visually-hidden">Поиск</span></a>
-        <form class="dropdown dropdown--search" action="https://echo.htmlacademy.ru" method="get">
-          <label class="visually-hidden" for="search">Поиск</label>
-          <input class="input dropdown__input" id="search" type="search" name="search" placeholder="Крем-брюле">
-        </form>
-        <a class="user-nav__link" href="#">Вход</a>
-        <form class="dropdown dropdown--login" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="login-email">Логин</label>
-          <input class="input dropdown__input" id="login-email" type="email" name="login" placeholder="email@example.com" required>
-          <label class="visually-hidden" for="login-password">Пароль</label>
-          <input class="input dropdown__input" id="login-password" type="password" name="password" placeholder="••••••" required>
-          <button class="btn btn--dropdown dropdown__btn" type="submit">Войти</button>
-          <a class="dark-link dropdown__extra-link" href="#">Забыли пароль?</a>
-          <a class="dark-link dropdown__extra-link" href="#">Новая регистрация</a>
-        </form>
-        <a class="user-nav__link" href="#">Пусто</a>
-      </section>
+      <div class="nav">
+        <a class="logo" href="#">
+          <img class="logo__image" src="img/index-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
+        </a>
+        <nav class="main-nav">
+          <a class="main-nav__link" href="#">Каталог</a>
+          <div class="dropdown dropdown--sub-nav">
+            <a class="dropdown__link dropdown__link--highlight" href="#">Новинки</a>
+            <a class="dropdown__link" href="catalog.html">Сливочное</a>
+            <a class="dropdown__link" href="#">Щербеты</a>
+            <a class="dropdown__link" href="#">Фруктовый лед</a>
+            <a class="dropdown__link" href="#">Мелорин</a>
+          </div>
+          <a class="main-nav__link" href="#">Доставка и оплата</a>
+          <a class="main-nav__link" href="#">О компании</a>
+        </nav>
+        <section class="user-nav">
+          <a class="user-nav__link" href="#"><!--<span class="visually-hidden">-->Поиск<!--</span>--></a>
+          <form class="dropdown dropdown--search" action="https://echo.htmlacademy.ru" method="get">
+            <label class="visually-hidden" for="search">Поиск</label>
+            <input class="input dropdown__input" id="search" type="search" name="search" placeholder="Крем-брюле">
+          </form>
+          <a class="user-nav__link" href="#">Вход</a>
+          <form class="dropdown dropdown--login" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="login-email">Логин</label>
+            <input class="input dropdown__input" id="login-email" type="email" name="login" placeholder="email@example.com" required>
+            <label class="visually-hidden" for="login-password">Пароль</label>
+            <input class="input dropdown__input" id="login-password" type="password" name="password" placeholder="••••••" required>
+            <button class="btn btn--dropdown dropdown__btn" type="submit">Войти</button>
+            <a class="dark-link dropdown__extra-link" href="#">Забыли пароль?</a>
+            <a class="dark-link dropdown__extra-link" href="#">Новая регистрация</a>
+          </form>
+          <a class="user-nav__link" href="#">Пусто</a>
+        </section>
+      </div>
       <p class="worktime">
         с 10 до 20, ежедневно
         <span class="worktime__phone">8 812 450-25-25</span>
       </p>
-      <section class="slider">
-        <div class="promo slider__item">
-          <img class="promo__img" src="img/icecream-group1.png" alt="Два рожка мороженого: кремового и бело-малинового цветов" width="647" height="584">
-          <h2 class="promo__title">Крем-брюле и пломбир с малиновым джемом</h2>
+      <section class="promo">
+        <div class="slider">
+          <div class="slider__slides">
+            <div class="slide">
+              <img class="slide__img" src="img/icecream-group1.png" alt="Два рожка мороженого: кремового и бело-малинового цветов" width="647" height="584">
+              <h2 class="slide__title">Крем-брюле и пломбир с малиновым джемом</h2>
+            </div>
+            <div class="slide">
+              <img class="slide__img" src="img/icecream-group2.png" alt="Два рожка мороженого: шоколадного и лимонного цветов" width="644" height="582">
+              <h2 class="slide__title">Шоколадный пломбир и лимонный сорбет</h2>
+            </div>
+            <div class="slide">
+              <img class="slide__img" src="img/icecream-group3.png" alt="Два рожка мороженого: ванильного и розового цветов" width="639" height="582">
+              <h2 class="slide__title">Пломбир с помадкой и&nbsp;клубничный щербет</h2>
+            </div>
+          </div>
         </div>
-        <div class="promo slider__item">
-          <img class="promo__img" src="img/icecream-group2.png" alt="Два рожка мороженого: шоколадного и лимонного цветов" width="644" height="582">
-          <h2 class="promo__title">Шоколадный пломбир и лимонный сорбет</h2>
-        </div>
-        <div class="promo slider__item">
-          <img class="promo__img" src="img/icecream-group3.png" alt="Два рожка мороженого: ванильного и розового цветов" width="639" height="582">
-          <h2 class="promo__title">Пломбир с помадкой и клубничный щербет</h2>
-        </div>
-        <div class="toggle-list">
+        <div class="promo__toggle-list">
           <a class="toggle toggle--active"><span class="visually-hidden">Переключатель промо: предложение 1</span></a>
           <a class="toggle"><span class="visually-hidden">Переключатель промо: предложение 2</span></a>
           <a class="toggle"><span class="visually-hidden">Переключатель промо: предложение 3</span></a>
         </div>
-        <a class="btn btn--slider slider__btn" href="#">Давайте оба!</a>
+        <a class="btn promo__btn" href="#">Давайте оба!</a>
       </section>
     </header>
     <main class="container">
