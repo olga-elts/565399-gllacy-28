@@ -29,7 +29,7 @@
             <a class="user-nav__link user-nav__link--search" href="#"><span class="visually-hidden">Поиск</span></a>
             <form class="dropdown dropdown--search" action="https://echo.htmlacademy.ru" method="get">
               <label class="visually-hidden" for="search">Поиск</label>
-              <input class="input dropdown__input" id="search" type="search" name="search" placeholder="Крем-брюле">
+              <input class="input" id="search" type="search" name="search" placeholder="Крем-брюле">
             </form>
             <a class="user-nav__link user-nav__link--login" href="#">Вход</a>
             <form class="dropdown dropdown--login" action="https://echo.htmlacademy.ru" method="post">
@@ -37,9 +37,11 @@
               <input class="input dropdown__input" id="login-email" type="email" name="login" placeholder="email@example.com" required>
               <label class="visually-hidden" for="login-password">Пароль</label>
               <input class="input dropdown__input" id="login-password" type="password" name="password" placeholder="••••••" required>
-              <button class="btn btn--dropdown dropdown__btn" type="submit">Войти</button>
-              <a class="dark-link dropdown__extra-link" href="#">Забыли пароль?</a>
-              <a class="dark-link dropdown__extra-link" href="#">Новая регистрация</a>
+              <button class="btn dropdown__btn" type="submit">Войти</button>
+              <div class="dropdown__extra-links">
+                <a class="dark-link dropdown__extra-link" href="#">Забыли пароль?</a>
+                <a class="dark-link dropdown__extra-link" href="#">Новая регистрация</a>
+              </div>
             </form>
             <a class="user-nav__link user-nav__link--basket" href="#">Пусто</a>
           </section>
@@ -183,7 +185,7 @@
         </sectopn>
       </footer>
       <div class="popup">
-        <b class="popup__title">Мы обязательно вам ответим!</b>
+        <p class="popup__title">Мы обязательно вам ответим!</p>
         <button class="popup__close-btn" type="button" aria-label="Закрыть форму">&times;</button>
         <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="name">Имя Фамилия</label>
@@ -191,7 +193,7 @@
           <label class="visually-hidden" for="email">Элетронная почта</label>
           <input class="input popup__input" id="email" type="email" name="email" placeholder="email@example.com" required>
           <textarea class="textarea popup__textarea" name="customer-request" placeholder="В свободной форме"></textarea>
-          <button class="btn" type="submit">Отправить</button>
+          <button class="btn popup__btn" type="submit">Отправить</button>
         </form>
       </div>
     </div>
