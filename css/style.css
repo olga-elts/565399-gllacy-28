@@ -352,7 +352,7 @@ textarea {
 .dropdown {
   display: none;
   position: absolute;
-  right: 50%;
+  right: 33%;
   top: 100px;
   z-index: 2;
   background-color: var(--form-bg-basic);
@@ -425,6 +425,7 @@ textarea {
 }
 
 .dropdown__btn {
+  display: inline-block;
   padding: 10px 26px;
   text-shadow: none;
   border-radius: 26px;
@@ -440,27 +441,70 @@ textarea {
   line-height: 1.375;
 }
 
+.user-nav__link--basket-full:hover + .dropdown--order {
+  display: flex;
+}
+
+.dropdown--order {
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px 15px;
+}
+
 .dropdown__basket {
   color: var(--dark);
 }
 
 .basket__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
   font-size: 13px;
   line-height: 16px;
 }
 
 .basket__total {
+  padding: 15px 0;
+  text-align: right;
   font-size: 15px;
   line-height: 16px;
   font-weight: 700;
+  border-top: 1px solid var(--basket-separate);
+}
+
+.item__delete-btn {
+  margin: 0 6px;
+  width: 11px;
+  height: 11px;
+  background-image: url("../img/cross-small.svg");
+  background-repeat: no-repeat;
+}
+
+.item__img {
+  margin: 0 3px;
+  border-radius: 50%;
+}
+
+.item__title {
+  padding: 0 10px;
+  width: 247px;
 }
 
 .item__quantity {
+  padding: 0 10px;
+  width: 121px;
   color: var(--basket-text-weight);
 }
 
 .item__quantity span {
   color: var(--basket-text-price);
+}
+
+.item__price {
+  padding: 0 10px;
+  width: 80px;
 }
 
 .worktime {

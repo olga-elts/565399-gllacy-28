@@ -46,47 +46,41 @@
             <a class="user-nav__link user-nav__link--basket-full" href="#">2 товара</a>
             <div class="dropdown dropdown--order">
               <!-- Вроде попыталась по БЭМ, но почему-то мне не нравится... может, лучше на дивах вместо таблицы? -->
-              <table class="basket dropdown__basket">
-                <tr class="item basket__item">
-                  <td class="item__delete-btn">
-                    <a class="dark-link" href="#" aria-label="Убрать товар из корзины">&times;</a>
-                  </td>
-                  <td class="item__img">
-                    <img src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="33" height="33">
-                  </td>
-                  <td class="item__title">
+              <article class="dropdown__basket">
+                <div class="item basket__item">
+                  <a class="dark-link item__delete-btn" href="#">
+                    <span class="visually-hidden">Убрать товар из корзины</span>
+                  </a>
+                  <img class="item__img" src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="33" height="33">
+                  <div class="item__title">
                     Пломбир с апельсиновым джемом
-                  </td>
-                  <td class="item__quantity">
+                  </div>
+                  <div class="item__quantity">
                     1,5 кг х <span>200 руб.</span>
-                  </td>
-                  <td class="item__price">
+                  </div>
+                  <div class="item__price">
                     300 руб.
-                  </td>
-                </tr>
-                <tr class="item basket__item">
-                  <td class="item__delete-btn">
-                    <a class="dark-link" href="#" aria-label="Убрать товар из корзины">&times;</a>
-                  </td>
-                  <td class="item__img">
-                    <img src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="33" height="33">
-                  </td>
-                  <td class="item__title">
+                  </div>
+                </div>
+                <div class="item basket__item">
+                  <a class="dark-link item__delete-btn" href="#">
+                    <span class="visually-hidden">Убрать товар из корзины</span>
+                  </a>
+                  <img class="item__img" src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="33" height="33">
+                  <div class="item__title">
                     Клубничный пломбир с присыпкой из белого шоколада
-                  </td>
-                  <td class="item__quantity">
+                  </div>
+                  <div class="item__quantity">
                     1,5 кг х <span>300 руб.</span>
-                  </td>
-                  <td class="item__price">
+                  </div>
+                  <div class="item__price">
                     450 руб.
-                  </td>
-                </tr>
-                <tr class="basket__total">
-                  <td colspan="5">
-                    <b>Итого: 750 руб.</b>
-                  </td>
-                </tr>
-              </table>
+                  </div>
+                </div>
+                <div class="basket__total">
+                  Итого: 750 руб.
+                </div>
+              </article>
               <a class="btn dropdown__btn" href="#">Оформить заказ</a>
             </div>
           </section>
