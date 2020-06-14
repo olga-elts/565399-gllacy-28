@@ -109,15 +109,17 @@
             </fieldset>
             <fieldset class="filters__item">
               <legend class="filters__title">Цена: 100 ₽ – 500 ₽</legend>
-              <div class="filter">
-                <div class="range">
-
+              <div class="filter filter--range">
+                <div class="range__line">
+                  <div class="range__scale"></div>
                 </div>
+                <div class="range__btn range__btn--min"></div>
+                <div class="range__btn range__btn--max"></div>
               </div>
             </fieldset>
             <fieldset class="filters__item">
               <legend class="filters__title">Жирность:</legend>
-              <div class="filter">
+              <div class="filter filter--fat">
                 <input id="fat-0%" type="radio" name="fat" value="0%">
                 <label for="fat-0%">0%</label>
                 <input id="fat-<0%" type="radio" name="fat" value="less-than-10%" checked>
@@ -130,7 +132,7 @@
             </fieldset>
             <fieldset  class="filters__item">
               <legend class="filters__title">Наполнители:</legend>
-              <div class="filter">
+              <div class="filter filter--toppings">
                 <input id="chocolate" type="checkbox" name="chocolate" checked>
                 <label for="chocolate">шоколадные</label>
                 <input id="sprinkles" type="checkbox" name="sprinkles" checked>

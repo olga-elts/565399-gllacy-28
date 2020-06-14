@@ -35,6 +35,7 @@
   --btn-shadow-active: #942718;
   --btn-text-shadow: rgba(160, 32, 11, 0.76);
   --social-border-basic: rgba(255, 255, 255, 0.5);
+  --social-border-active: rgba(255, 255, 255, 0.7);
   --toggle-bg-hover: rgba(255, 255, 255, 0.4);
   --contacts-bg-basic: #FEFEFE;
   --form-bg-basic: #F8F7F4;
@@ -53,6 +54,7 @@
   --basket-text-price: #ABABAB;
   --basket-separate: #CACAC7;
   --price-text-shadow: rgba(49, 50, 53, 0.5);
+  --range-line: rgba(248, 247, 244, 0.5);
 }
 
 body {
@@ -259,7 +261,7 @@ textarea {
 .user-nav__link--basket:hover,
 .user-nav__link--basket:focus,
 .user-nav__link--basket:active {
-  background-image: url("../img/basket-red-icon.svg");
+  background-image: url("../img/basket-black-icon.svg");
 }
 
 .user-nav__link--basket-full {
@@ -942,6 +944,10 @@ textarea {
   opacity: 1;
 }
 
+.social__item:active {
+  border: 2px solid var(--social-border-active);
+}
+
 .social__item--facebook {
   background-image: url("../img/facebook.svg");
 }
@@ -1135,7 +1141,8 @@ textarea {
 }
 
 .filter {
-  padding: 9px 16px;
+  display: flex;
+  padding: 9px 19px;
   font-size: 16px;
   line-height: 18px;
   background-color: var(--interactive-bg-basic);
@@ -1173,16 +1180,117 @@ textarea {
   border-radius: 20px;
 }
 
-.filter__btn:hover,
-.filter__btn:focus,
-.filter__btn:active {
+.filters__btn:hover,
+.filters__btn:focus,
+.filters__btn:active {
   background-color: var(--form-bg-basic);
   color: var(--dark);
 }
 
-.range {
-  width: 186px;
-  height: 18px;
+.filters__btn:active {
+  padding: 9px 29px;
+  border: none;
+  box-shadow: inset 0px 2px 1px var(--nav-shadow-active);
+}
+
+.filter--range {
+  position: relative;
+  align-items: center;
+  width: 218px;
+  height: 36px;
+}
+
+.range__line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--range-line);
+}
+
+.range__scale {
+  width: 98px;
+  height: 2px;
+  margin-left: 25px;
+  background-color: var(--form-bg-basic);
+}
+
+.range__btn {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/filter-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.range__btn--min {
+  left: 34px;
+}
+
+.range__btn--max {
+  left: 132px;
+}
+
+.filter--fat input,
+.filter--toppings input {
+  display: none;
+}
+
+.filter--fat label {
+  position: relative;
+  padding-left: 33px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.filter--fat label::before {
+  position: absolute;
+  left: 0;
+  top: -1.5px;
+  content: "";
+  width: 22px;
+  height: 22px;
+  opacity: 0.8;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter--fat input:checked + label::before  {
+  background-image: url("../img/radio-on.svg");
+}
+
+.filter--toppings label {
+  position: relative;
+  padding-left: 35px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.filter--toppings label::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 23px;
+  height: 20px;
+  opacity: 0.8;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.filter--toppings input:checked + label::before  {
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter--fat label:last-child,
+.filter--toppings label:last-child {
+  margin-right: 0;
+}
+
+.filter label:hover::before {
+  opacity: 1;
 }
 
 .pagination {
