@@ -14,80 +14,87 @@
             <img class="logo__image" src="img/index-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
           </a>
           <nav class="main-nav">
-            <a class="main-nav__link main-nav__link--active" href="#">Каталог</a>
-            <div class="dropdown dropdown--sub-nav">
-              <a class="dropdown__link dropdown__link--highlight" href="#">Новинки</a>
-              <a class="dropdown__link dropdown__link--active" href="#">Сливочное</a>
-              <a class="dropdown__link" href="#">Щербеты</a>
-              <a class="dropdown__link" href="#">Фруктовый лед</a>
-              <a class="dropdown__link" href="#">Мелорин</a>
+            <div class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active" href="#">Каталог</a>
+              <div class="dropdown dropdown--sub-nav">
+                <a class="dropdown__link dropdown__link--highlight" href="#">Новинки</a>
+                <a class="dropdown__link dropdown__link--active" href="#">Сливочное</a>
+                <a class="dropdown__link" href="#">Щербеты</a>
+                <a class="dropdown__link" href="#">Фруктовый лед</a>
+                <a class="dropdown__link" href="#">Мелорин</a>
+              </div>
             </div>
             <a class="main-nav__link" href="#">Доставка и оплата</a>
             <a class="main-nav__link" href="#">О компании</a>
           </nav>
           <section class="user-nav">
-            <a class="user-nav__link user-nav__link--search" href="#"><span class="visually-hidden">Поиск</span></a>
-            <form class="dropdown dropdown--search" action="https://echo.htmlacademy.ru" method="get">
-              <label class="visually-hidden" for="search">Поиск</label>
-              <input class="input" id="search" type="search" name="search" placeholder="Крем-брюле">
-            </form>
-            <a class="user-nav__link user-nav__link--login" href="#">Вход</a>
-            <form class="dropdown dropdown--login" action="https://echo.htmlacademy.ru" method="post">
-              <label class="visually-hidden" for="login-email">Логин</label>
-              <input  class="input dropdown__input" id="login-email" type="email" name="login" placeholder="email@example.com" required>
-              <label class="visually-hidden" for="login-password">Пароль</label>
-              <input class="input dropdown__input" id="login-password" type="password" name="password" placeholder="••••••" required>
-              <button class="btn dropdown__btn" type="submit">Войти</button>
-              <div class="dropdown__extra-links">
-                <a class="dark-link dropdown__extra-link" href="#">Забыли пароль?</a>
-                <a class="dark-link dropdown__extra-link" href="#">Новая регистрация</a>
+            <div class="user-nav__item">
+              <a class="user-nav__link user-nav__link--search" href="#"><span class="visually-hidden">Поиск</span></a>
+              <form class="dropdown dropdown--search" action="https://echo.htmlacademy.ru" method="get">
+                <label class="visually-hidden" for="search">Поиск</label>
+                <input class="input" id="search" type="search" name="search" placeholder="Крем-брюле">
+              </form>
+            </div>
+            <div class="user-nav__item">
+              <a class="user-nav__link user-nav__link--login" href="#">Вход</a>
+              <form class="dropdown dropdown--login" action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="login-email">Логин</label>
+                <input  class="input dropdown__input" id="login-email" type="email" name="login" placeholder="email@example.com" required>
+                <label class="visually-hidden" for="login-password">Пароль</label>
+                <input class="input dropdown__input" id="login-password" type="password" name="password" placeholder="••••••" required>
+                <button class="btn dropdown__btn" type="submit">Войти</button>
+                <div class="dropdown__extra-links">
+                  <a class="dark-link dropdown__extra-link" href="#">Забыли пароль?</a>
+                  <a class="dark-link dropdown__extra-link" href="#">Новая регистрация</a>
+                </div>
+              </form>
+            </div>
+            <div class="user-nav__item">
+              <a class="user-nav__link user-nav__link--basket-full" href="#">2 товара</a>
+              <div class="dropdown dropdown--order">
+                <article class="dropdown__basket">
+                  <div class="item basket__item">
+                    <a class="dark-link item__delete-btn" href="#">
+                      <span class="visually-hidden">Убрать товар из корзины</span>
+                    </a>
+                    <img class="item__img" src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="33" height="33">
+                    <div class="item__title">
+                      Пломбир с апельсиновым джемом
+                    </div>
+                    <div class="item__quantity">
+                      1,5 кг х <span>200 руб.</span>
+                    </div>
+                    <div class="item__price">
+                      300 руб.
+                    </div>
+                  </div>
+                  <div class="item basket__item">
+                    <a class="dark-link item__delete-btn" href="#">
+                      <span class="visually-hidden">Убрать товар из корзины</span>
+                    </a>
+                    <img class="item__img" src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="33" height="33">
+                    <div class="item__title">
+                      Клубничный пломбир с присыпкой из белого шоколада
+                    </div>
+                    <div class="item__quantity">
+                      1,5 кг х <span>300 руб.</span>
+                    </div>
+                    <div class="item__price">
+                      450 руб.
+                    </div>
+                  </div>
+                  <div class="basket__total">
+                    Итого: 750 руб.
+                  </div>
+                </article>
+                <a class="btn dropdown__btn" href="#">Оформить заказ</a>
               </div>
-            </form>
-            <a class="user-nav__link user-nav__link--basket-full" href="#">2 товара</a>
-            <div class="dropdown dropdown--order">
-              <!-- Вроде попыталась по БЭМ, но почему-то мне не нравится... может, лучше на дивах вместо таблицы? -->
-              <article class="dropdown__basket">
-                <div class="item basket__item">
-                  <a class="dark-link item__delete-btn" href="#">
-                    <span class="visually-hidden">Убрать товар из корзины</span>
-                  </a>
-                  <img class="item__img" src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="33" height="33">
-                  <div class="item__title">
-                    Пломбир с апельсиновым джемом
-                  </div>
-                  <div class="item__quantity">
-                    1,5 кг х <span>200 руб.</span>
-                  </div>
-                  <div class="item__price">
-                    300 руб.
-                  </div>
-                </div>
-                <div class="item basket__item">
-                  <a class="dark-link item__delete-btn" href="#">
-                    <span class="visually-hidden">Убрать товар из корзины</span>
-                  </a>
-                  <img class="item__img" src="img/cream-strawberry.jpg" alt="Мороженое розового цвета с посыпкой в форме сердечек" width="33" height="33">
-                  <div class="item__title">
-                    Клубничный пломбир с присыпкой из белого шоколада
-                  </div>
-                  <div class="item__quantity">
-                    1,5 кг х <span>300 руб.</span>
-                  </div>
-                  <div class="item__price">
-                    450 руб.
-                  </div>
-                </div>
-                <div class="basket__total">
-                  Итого: 750 руб.
-                </div>
-              </article>
-              <a class="btn dropdown__btn" href="#">Оформить заказ</a>
             </div>
           </section>
         </div>
         <p class="worktime">
           с 10 до 20, ежедневно
-          <span class="worktime__phone">8 812 450-25-25</span>
+          <a class="worktime__phone" href="tel:88124502525">8 812 450-25-25</a>
         </p>
       </header>
       <main class="container">

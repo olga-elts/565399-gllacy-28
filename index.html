@@ -14,41 +14,49 @@
             <img class="logo__image" src="img/index-logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
           </a>
           <nav class="main-nav">
-            <a class="main-nav__link" href="#">Каталог</a>
-            <div class="dropdown dropdown--sub-nav">
-              <a class="dropdown__link dropdown__link--highlight" href="#">Новинки</a>
-              <a class="dropdown__link" href="catalog.html">Сливочное</a>
-              <a class="dropdown__link" href="#">Щербеты</a>
-              <a class="dropdown__link" href="#">Фруктовый лед</a>
-              <a class="dropdown__link" href="#">Мелорин</a>
+            <div class="main-nav__item">
+              <a class="main-nav__link" href="#">Каталог</a>
+              <div class="dropdown dropdown--sub-nav">
+                <a class="dropdown__link dropdown__link--highlight" href="#">Новинки</a>
+                <a class="dropdown__link" href="catalog.html">Сливочное</a>
+                <a class="dropdown__link" href="#">Щербеты</a>
+                <a class="dropdown__link" href="#">Фруктовый лед</a>
+                <a class="dropdown__link" href="#">Мелорин</a>
+              </div>
             </div>
             <a class="main-nav__link" href="#">Доставка и оплата</a>
             <a class="main-nav__link" href="#">О компании</a>
           </nav>
           <section class="user-nav">
-            <a class="user-nav__link user-nav__link--search" href="#"><span class="visually-hidden">Поиск</span></a>
-            <form class="dropdown dropdown--search" action="https://echo.htmlacademy.ru" method="get">
-              <label class="visually-hidden" for="search">Поиск</label>
-              <input class="input" id="search" type="search" name="search" placeholder="Крем-брюле">
-            </form>
-            <a class="user-nav__link user-nav__link--login" href="#">Вход</a>
-            <form class="dropdown dropdown--login" action="https://echo.htmlacademy.ru" method="post">
-              <label class="visually-hidden" for="login-email">Логин</label>
-              <input class="input dropdown__input" id="login-email" type="email" name="login" placeholder="email@example.com" required>
-              <label class="visually-hidden" for="login-password">Пароль</label>
-              <input class="input dropdown__input" id="login-password" type="password" name="password" placeholder="••••••" required>
-              <button class="btn dropdown__btn" type="submit">Войти</button>
-              <div class="dropdown__extra-links">
-                <a class="dark-link dropdown__extra-link" href="#">Забыли пароль?</a>
-                <a class="dark-link dropdown__extra-link" href="#">Новая регистрация</a>
-              </div>
-            </form>
-            <a class="user-nav__link user-nav__link--basket" href="#">Пусто</a>
+            <div class="user-nav__item">
+              <a class="user-nav__link user-nav__link--search" href="#"><span class="visually-hidden">Поиск</span></a>
+              <form class="dropdown dropdown--search" action="https://echo.htmlacademy.ru" method="get">
+                <label class="visually-hidden" for="search">Поиск</label>
+                <input class="input" id="search" type="search" name="search" placeholder="Крем-брюле">
+              </form>
+            </div>
+            <div class="user-nav__item">
+              <a class="user-nav__link user-nav__link--login" href="#">Вход</a>
+              <form class="dropdown dropdown--login" action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="login-email">Логин</label>
+                <input class="input dropdown__input" id="login-email" type="email" name="login" placeholder="email@example.com" required>
+                <label class="visually-hidden" for="login-password">Пароль</label>
+                <input class="input dropdown__input" id="login-password" type="password" name="password" placeholder="••••••" required>
+                <button class="btn dropdown__btn" type="submit">Войти</button>
+                <div class="dropdown__extra-links">
+                  <a class="dark-link dropdown__extra-link" href="#">Забыли пароль?</a>
+                  <a class="dark-link dropdown__extra-link" href="#">Новая регистрация</a>
+                </div>
+              </form>
+            </div>
+            <div class="user-nav__item">
+              <a class="user-nav__link user-nav__link--basket" href="#">Пусто</a>
+            </div>
           </section>
         </div>
         <p class="worktime">
           с 10 до 20, ежедневно
-          <span class="worktime__phone">8 812 450-25-25</span>
+          <a class="worktime__phone" href="tel:88124502525">8 812 450-25-25</a>
         </p>
         <section class="promo">
           <div class="promo__img-list">
@@ -184,6 +192,7 @@
           <p class="developer__copyright">Сделано в <a class="light-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
         </sectopn>
       </footer>
+      <div class="overlay"></div>
       <div class="popup">
         <p class="popup__title">Мы обязательно вам ответим!</p>
         <button class="popup__close-btn" type="button" aria-label="Закрыть форму">&times;</button>
