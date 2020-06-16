@@ -202,7 +202,7 @@ textarea {
   border-radius: 26px;
 }
 
-.main-nav__link:not(:last-child) {
+.main-nav__item:not(:last-child) {
   margin-right: 6px;
 }
 
@@ -555,6 +555,7 @@ textarea {
 }
 
 .worktime__phone {
+  color: var(--basic);
   font-size: 22px;
 }
 
