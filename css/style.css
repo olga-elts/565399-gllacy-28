@@ -57,6 +57,17 @@
   --range-line: rgba(248, 247, 244, 0.5);
 }
 
+@keyframes appear {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes shake {
+  0%, 100% { transform: translate(-50%, -50%); }
+  20%, 60% { transform: translate(-51%, -50%); }
+  40%, 80% { transform: translate(-49%, -50%); }
+}
+
 body {
   min-width: 1200px;
   margin: 0 auto;
@@ -580,13 +591,13 @@ textarea {
 .promo__img {
   display: none;
   margin: 0 auto;
-  opacity: 0;
-  transition: opacity 1s linear 0s;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-timing-function: linear;
 }
 
 .promo__img--active {
   display: block;
-  opacity: 1;
 }
 
 .promo__title-list {
@@ -1053,7 +1064,6 @@ textarea {
   height: 100%;
   content: "";
   background-color: var(--overlay);
-
 }
 
 .popup {
@@ -1068,6 +1078,18 @@ textarea {
   color: var(--dark);
   background-color: var(--form-bg-basic);
   border-radius: 6px;
+}
+
+.modal-show {
+  display: block;
+  animation-name: appear;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+.modal-error{
+  animation-name: shake;
+  animation-duration: 0.2s;
 }
 
 .popup__title {
@@ -1092,6 +1114,7 @@ textarea {
   background-color: transparent;
   background-image: url("../img/cross-big.svg");
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .popup__form {
@@ -1114,6 +1137,7 @@ textarea {
   padding-left: 24px;
   padding-right: 24px;
   align-self: flex-end;
+  cursor: pointer;
 }
 
 .breadcrumbs {
