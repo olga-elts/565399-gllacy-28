@@ -11,6 +11,17 @@ var surname = popup.querySelector("[name=name]");
 var email = popup.querySelector("[name=email]");
 var request = popup.querySelector("[name=customer-request]");
 
+var contactsWidth = function() {
+  var screenWidth = document.body.clientWidth;
+  document.documentElement.style.setProperty('--screenWidth', `${screenWidth}px`);
+};
+
+contactsWidth();
+
+window.addEventListener("resize", () => {
+  contactsWidth();
+});
+
 for (let i = 0; i < toggles.length; i++) {
   toggles[i].addEventListener("click", function (evt) {
   evt.preventDefault();

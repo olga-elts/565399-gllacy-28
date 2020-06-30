@@ -58,8 +58,8 @@
 }
 
 @keyframes appear {
-	0% {opacity: 0;}
-	100% {opacity: 1;}
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 @keyframes shake {
@@ -917,18 +917,24 @@ textarea {
 
 .contacts {
   position: relative;
-  margin: 0 calc((100vw - 1200px) / -2 - 27px);
+  align-self: center;
+  width: var(--screenWidth);
+  height: 430px;
   color: var(--dark);
+  background-image: url("../img/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .contacts iframe {
-  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .contacts__info {
   position: absolute;
   top: 62px;
-  right: calc((100vw - 1200px) / 2 + 27px);
+  right: calc((var(--screenWidth) - 1146px) / 2);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
