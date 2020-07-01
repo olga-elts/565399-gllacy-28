@@ -112,7 +112,7 @@ img {
   margin: auto;
   width: 716px;
   height: 716px;
-  -webkit-filter: blur(250px);
+  filter: blur(250px);
 }
 
 .light-1:before {
@@ -129,9 +129,9 @@ img {
 
 .catalog {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
-  background-size: auto 656px;
+  background-size:auto 656px;
   background-position: top center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
 }
 
 .wrapper {
@@ -579,6 +579,7 @@ textarea {
 .worktime {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   margin: 0;
   margin-bottom: -24px;
   font-size: 14px;
@@ -1068,13 +1069,13 @@ textarea {
 
 .menu__link--spotlight {
   background-image: url("../img/heart.svg");
-  background-position: left center;
+  background-position: left 2.5px;
   background-repeat: no-repeat;
   font-weight: 700;
 }
 
 .developer {
-
+  align-self: center;
 }
 
 .developer__logo {
@@ -1327,7 +1328,14 @@ textarea {
   background-image: url("../img/filter-button.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   cursor: pointer;
+}
+
+.range__btn:hover {
+  width: 22px;
+  height: 22px;
+  margin-left: -1px;
 }
 
 .range__btn--min {
@@ -1403,6 +1411,7 @@ textarea {
 .pagination {
   padding: 40px 0 30px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
 }
 

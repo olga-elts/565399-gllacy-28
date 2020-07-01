@@ -26,27 +26,21 @@ window.addEventListener("resize", () => {
   calcWidth();
 });
 
-for (let i = 0; i < toggles.length; i++) {
+toggles.forEach((item, i) => {
   toggles[i].addEventListener("click", function (evt) {
-  evt.preventDefault();
-  if (!toggles[i].classList.contains("toggle--active")) {
-    for (let i = 0; i < toggles.length; i++) {
-      toggles[i].classList.remove("toggle--active");
+    evt.preventDefault();
+    if (!toggles[i].classList.contains("toggle--active")) {
+      document.querySelector(".toggle--active").classList.remove("toggle--active");
+      document.querySelector(".promo__img--active").classList.remove("promo__img--active");
+      document.querySelector(".promo__title--active").classList.remove("promo__title--active");
+      toggles[i].classList.add("toggle--active");
+      promoImgs[i].classList.add("promo__img--active");
+      promoTitles[i].classList.add("promo__title--active");
+      pageIndex.classList.remove("light-1", "light-2", "light-3");
+      pageIndex.classList.add("light-" + (i + 1));
     };
-    toggles[i].classList.add("toggle--active");
-    for (let i = 0; i < promoImgs.length; i++) {
-      promoImgs[i].classList.remove("promo__img--active");
-    };
-    for (let i = 0; i < promoTitles.length; i++) {
-      promoTitles[i].classList.remove("promo__title--active");
-    };
-    promoImgs[i].classList.add("promo__img--active");
-    promoTitles[i].classList.add("promo__title--active");
-    pageIndex.classList.remove("light-1", "light-2", "light-3");
-    pageIndex.classList.add("light-" + (i + 1));
-  };
+  });
 });
-};
 
 try {
   storageSurname = localStorage.getItem("surname");
