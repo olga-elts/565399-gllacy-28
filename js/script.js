@@ -11,15 +11,19 @@ var surname = popup.querySelector("[name=name]");
 var email = popup.querySelector("[name=email]");
 var request = popup.querySelector("[name=customer-request]");
 
-var contactsWidth = function() {
+var isStorageSupport = true;
+var storageSurname = "";
+var storageEmail = "";
+
+var calcWidth = function() {
   var screenWidth = document.body.clientWidth;
   document.documentElement.style.setProperty('--screenWidth', `${screenWidth}px`);
 };
 
-contactsWidth();
+calcWidth();
 
 window.addEventListener("resize", () => {
-  contactsWidth();
+  calcWidth();
 });
 
 for (let i = 0; i < toggles.length; i++) {
@@ -45,13 +49,8 @@ for (let i = 0; i < toggles.length; i++) {
 };
 
 try {
-  storage = localStorage.getItem("surname");
-} catch (err) {
-  isStorageSupport = false;
-};
-
-try {
-  storage = localStorage.getItem("email");
+  storageSurname = localStorage.getItem("surname");
+  storageEmail = localStorage.getItem("email");
 } catch (err) {
   isStorageSupport = false;
 };
@@ -66,12 +65,18 @@ contactsBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal-show");
   overlay.classList.add("modal-show");
-  if (storage) {
-    surname.value = storage;
-    email.value = storage;
+  if (storageSurname && storageEmail) {
+    surname.value = storageSurname;
+    email.value = storageEmail;
     request.focus();
   } else {
-    surname.focus();
+    if (storageSurname) {
+      surname.value = storageSurname;
+      email.focus();
+    } else {
+      email.value = storageEmail;
+      surname.focus();
+    }
   }
 });
 
@@ -97,10 +102,11 @@ popupForm.addEventListener("submit", function (evt) {
   if (!email.value || !request.value) {
     evt.preventDefault();
     popup.classList.remove("modal-error");
+    document.body.clientWidth;
     popup.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
-      localStorage.setItem("name", surname.value);
+      localStorage.setItem("surname", surname.value);
       localStorage.setItem("email", email.value);
     }
   }
