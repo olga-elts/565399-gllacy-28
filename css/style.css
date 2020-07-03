@@ -189,6 +189,7 @@ textarea {
 .main-nav {
   display: flex;
   align-items: center;
+  padding-bottom: 7px;
 }
 
 .user-nav__item,
@@ -582,7 +583,7 @@ textarea {
   flex-direction: column;
   align-items: flex-end;
   margin: 0;
-  margin-bottom: -24px;
+  margin-bottom: -32px;
   font-size: 14px;
   line-height: 1.375;
   font-weight: 700;
@@ -592,6 +593,7 @@ textarea {
 .worktime__phone {
   color: var(--basic);
   font-size: 22px;
+  padding-top: 5px;
 }
 
 .promo {
@@ -599,13 +601,13 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 299px;
+  padding-top: 303px;
   padding-bottom: 40px;
 }
 
 .promo__img-list {
   position: absolute;
-  top: -16px;
+  top: -12px;
   left: 0;
   right: 0;
   margin: auto;
@@ -727,6 +729,7 @@ textarea {
 
 .offer__text {
   font-size: 18px;
+  line-height: 22px;
   margin: 0;
   margin-bottom: 38px;
 }
@@ -742,7 +745,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(4, 267px);
   column-gap: 26px;
-  row-gap: 40px;
+  row-gap: 37px;
   margin-bottom: 40px;
 }
 
@@ -791,14 +794,14 @@ textarea {
 }
 
 .product__img {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   border-radius: 50%;
   display: block;
 }
 
 .product__price {
   position: absolute;
-  top: 216px;
+  top: 209px;
   left: 0px;
   z-index: 4;
   margin: 0;
@@ -861,7 +864,7 @@ textarea {
 
 .features__item {
   width: 540px;
-  padding: 16px 0 7px 55px;
+  padding: 16px 0 6px 55px;
   background-position: left 7px;
   background-repeat: no-repeat;
 }
@@ -885,7 +888,7 @@ textarea {
 .news {
   width: 560px;
   min-height: 220px;
-  padding: 23px 253px 23px 20px;
+  padding: 18px 253px 23px 20px;
   color: var(--dark);
   background-color: var(--basic);
   background-image: url("../img/strawberry-bg.jpg");
@@ -896,7 +899,7 @@ textarea {
 
 .news__text {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
   font-weight: 500;
 }
 
@@ -921,7 +924,7 @@ textarea {
   flex-wrap: wrap;
   align-content: space-between;
   height: 100%;
-  padding: 29px 16px 35px 20px;
+  padding: 24px 16px 35px 20px;
   background-color: var(--form-bg-basic);
   border-radius: 16px;
 }
@@ -939,6 +942,7 @@ textarea {
 }
 
 .form__btn {
+  margin-right: 3px;
   padding: 10px 19px;
   border-radius: 70px;
 }
@@ -978,17 +982,24 @@ textarea {
 
 .contacts__info p {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
-.contacts__info b {
+.contacts__info b,
+.contacts__phone {
   display: block;
   font-size: 18px;
   line-height: 24px;
 }
 
+.contacts__phone {
+  color: var(--dark);
+  font-weight: 700;
+}
+
 .contacts__btn {
   align-self: center;
+  margin-top: 9px;
   padding: 10px 28px;
   border-radius: 70px;
 }
@@ -1003,6 +1014,7 @@ textarea {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 6px;
 }
 
 .social__item {
@@ -1051,7 +1063,7 @@ textarea {
   flex-wrap: wrap;
   align-content: space-around;
   width: 327px;
-  margin: 0 auto;
+  margin: 12px auto 3px;
   font-size: 13px;
   line-height: 1.375;
 }
@@ -1216,7 +1228,7 @@ textarea {
 
 .page-title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-size: 35px;
   line-height: 41px;
 }
@@ -1239,7 +1251,7 @@ textarea {
 
 .filters__title {
   margin-left: 16px;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
   padding: 0;
   font-size: 14px;
   line-height: 16px;
@@ -1247,7 +1259,7 @@ textarea {
 
 .filter {
   display: flex;
-  padding: 9px 19px;
+  padding: 9px 16px;
   font-size: 16px;
   line-height: 18px;
   background-color: var(--interactive-bg-basic);
@@ -1303,6 +1315,7 @@ textarea {
   align-items: center;
   width: 218px;
   height: 36px;
+  padding: 9px 21px;
 }
 
 .range__line {
@@ -1351,14 +1364,14 @@ textarea {
 .filter--fat label {
   position: relative;
   padding-left: 33px;
-  margin-right: 15px;
+  margin-right: 19px;
   cursor: pointer;
 }
 
 .filter--fat label::before {
   position: absolute;
   left: 0;
-  top: -1.5px;
+  top: -2px;
   content: "";
   width: 22px;
   height: 22px;
@@ -1374,7 +1387,7 @@ textarea {
 
 .filter--toppings label {
   position: relative;
-  padding-left: 35px;
+  padding-left: 32px;
   margin-right: 20px;
   cursor: pointer;
 }
@@ -1406,7 +1419,8 @@ textarea {
 }
 
 .pagination {
-  padding: 40px 0 30px;
+  margin-right: -4px;
+  padding: 37px 0 28px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
