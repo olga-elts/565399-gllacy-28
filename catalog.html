@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Каталог - Gllacy Shop</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="catalog">
@@ -111,12 +112,13 @@
           <form class="filters" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="filters__item">
               <legend class="filters__title">Сортировка:</legend>
-                <select class="filter filter--sorting" name="sorting-order">
+                <select class="filter filter--sorting" id="sorting" name="sorting-order">
                   <option value="popular" selected>по популярности</option>
                   <option value="price-up">сначала недорогие</option>
                   <option value="price-down">сначала дорогие</option>
                   <option value="fat">по жирности</option>
                 </select>
+                <label class="visually-hidden" for="sorting">Сортировка мороженого</label>
             </fieldset>
             <fieldset class="filters__item">
               <legend class="filters__title">Цена: 100 ₽ – 500 ₽</legend>
@@ -161,7 +163,7 @@
         <section class="products">
           <article class="product">
             <a href="#">
-              <img class="product__img" src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета">
+              <img class="product__img" src="img/cream-orange.jpg" alt="Мороженое оранжевого цвета" width="267" height="267">
             </a>
             <p class="product__price">310 ₽<span>/кг</span></p>
             <a class="light-link product__link" href="#">

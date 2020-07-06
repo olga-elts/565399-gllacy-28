@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Gllacy Shop</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="index light-1">
@@ -174,7 +175,7 @@
               <a class="contacts__phone" href="tel:88124502525">8 812 450-25-25</a>
               (с 10 до 20 ежедневно)
             </p>
-            <a class="btn contacts__btn" href="#">Форма обратной связи</a>
+            <a class="btn contacts__btn" href="form.html">Форма обратной связи</a>
           </section>
         </section>
       </main>
@@ -207,7 +208,8 @@
           <input class="input popup__input" id="name" type="text" name="name" placeholder="Имя Фамилия">
           <label class="visually-hidden" for="email">Элетронная почта</label>
           <input class="input popup__input" id="email" type="email" name="email" placeholder="email@example.com">
-          <textarea class="textarea popup__textarea" name="customer-request" placeholder="В свободной форме"></textarea>
+          <textarea class="textarea popup__textarea" id="customer-request" name="customer-request" placeholder="В свободной форме"></textarea>
+          <label class="visually-hidden" for="customer-request">Текст сообщения</label>
           <button class="btn popup__btn" type="submit">Отправить</button>
         </form>
       </div>
