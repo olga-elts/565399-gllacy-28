@@ -26,6 +26,7 @@
   --glow-bg-2: rgba(218, 228, 239, 0.75);
   --page-bg-3: #9D8B84;
   --glow-bg-3: rgba(239, 224, 218, 0.75);
+  --transparent: rgba(255, 255, 255, 0);
   --basic: #FFFFFF;
   --dark: #323232;
   --halflight: #5A5A5A;
@@ -155,9 +156,9 @@ img {
 }
 
 .catalog {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--interactive-bg-basic)), to(var(--basic)));
-  background-image: -o-linear-gradient(top, var(--interactive-bg-basic) 0%, var(--basic) 100%);
-  background-image: linear-gradient(180deg, var(--interactive-bg-basic) 0%, var(--basic) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--interactive-bg-basic)), to(var(--transparent)));
+  background-image: -o-linear-gradient(top, var(--interactive-bg-basic) 0%, var(--transparent) 100%);
+  background-image: linear-gradient(180deg, var(--interactive-bg-basic) 0%, var(--transparent) 100%);
   background-size:auto 656px;
   background-position: top center;
   background-repeat: repeat-x;
